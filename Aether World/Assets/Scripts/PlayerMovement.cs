@@ -11,45 +11,49 @@ public class PlayerMovement : MonoBehaviour
     public Transform feet;
     public LayerMask groundLayers;
 
-    public string currentStance;
-    public string stance;
+    public int jumpMax = 0;
+    public int jumpCount = 0;
+    public bool canResetJumps;
+
+    public string currentEssence;
     public SpriteRenderer spriteRender;
 
-    [Header("Stance 1 Variables")]
-    public float stanceFastMovementSpeed;
-    public float stanceFastJumpForce;
+    [Header("Air Essence Variables")]
+    public float airEssenceMovementSpeed;
+    public float airEssenceJumpForce;
+    public int airEssenceJumpMax;
 
-    [Header("Stance 2 Variables")]
-    public float stanceStrongMovementSpeed;
-    public float stanceStrongJumpForce;
+    [Header("Earth Essence Variables")]
+    public float earthEssenceMovementSpeed;
+    public float earthEssenceJumpForce;
+    public int earthEssenceJumpMax;
 
     float movex;
 
     private void Awake()
     {
-        SwitchStance("FAST");
+        SwitchEssence("AIR");
     }
 
     private void Update()
     {
         movex = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump") && ((jumpCount < jumpMax) || IsGrounded()))
         {
             Jump();
-
         }
 
         //All the stance switching code below is pretty straighforward. I just commented out debugs cause they get annoying in console.
-        if (Input.GetButtonDown("Stance 1"))
+        if (Input.GetButtonDown("Essence 1"))
         {
-            SwitchStance("FAST");
-            //Debug.Log("Switched to " + currentStance + " stance!");
+            SwitchEssence("AIR");
+            //Debug.Log("Switched to " + currentEssence + " stance!");
         }
-        if (Input.GetButtonDown("Stance 2"))
+        if (Input.GetButtonDown("Essence 2"))
         {
-            SwitchStance("STRONG");
-            //Debug.Log("Switched to " + currentStance + " stance!");
+            SwitchEssence("EARTH");
+            //Debug.Log("Switched to " + currentEssence + " essence!");
         }
 
     }
@@ -59,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
         Vector2 movement = new Vector2(movex * movementSpeed, rb.velocity.y);
 
         rb.velocity = movement;
+
+        IsGrounded();
     }
 
 
@@ -66,8 +72,16 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
 
-        rb.velocity = movement;
-
+        if (jumpCount < jumpMax)
+        {
+            rb.velocity = movement;
+            jumpCount++;
+            Debug.Log("Jumped?");
+        }
+        else
+        {
+            Debug.Log("Already used " + jumpMax + " jumps");
+        }
     }
 
     public bool IsGrounded()
@@ -77,34 +91,40 @@ public class PlayerMovement : MonoBehaviour
 
         if (groundCheck != null)
         {
+            jumpCount = -1;
             return true;
         }
-        return false;
+        else
+        {
+            return false;
+        }
     }
 
     //This function just matches current value of stance and executes blocks of codes based on its value. (Default does nothing ATM)
-    public void SwitchStance(string stance)
+    public void SwitchEssence(string essence)
     {
-        if (currentStance == stance)
+        if (currentEssence == essence)
         {
-            Debug.Log("Already in that stance silly goose");
+            //Debug.Log("Already imbued with that essence silly goose");
             return;
         }
         else
         {
-            switch (stance)
+            switch (essence)
             {
-                case "FAST":
-                    currentStance = stance;
-                    movementSpeed = stanceFastMovementSpeed;
-                    jumpForce = stanceFastJumpForce;
-                    spriteRender.color = Color.blue;
+                case "AIR":
+                    currentEssence = essence;
+                    movementSpeed = airEssenceMovementSpeed;
+                    jumpForce = airEssenceJumpForce;
+                    jumpMax = airEssenceJumpMax;
+                    spriteRender.color = Color.cyan;
                     break;
-                case "STRONG":
-                    currentStance = stance;
-                    movementSpeed = stanceStrongMovementSpeed;
-                    jumpForce = stanceStrongJumpForce;
-                    spriteRender.color = Color.red;
+                case "EARTH":
+                    currentEssence = essence;
+                    movementSpeed = earthEssenceMovementSpeed;
+                    jumpForce = earthEssenceJumpForce;
+                    jumpMax = earthEssenceJumpMax;
+                    spriteRender.color = Color.green;
                     break;
                 default:
                     break;

@@ -719,7 +719,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.1
   m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -771,13 +771,16 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 64
-  currentStance: 
-  stance: 
+  jumpMax: 0
+  jumpCount: 0
+  currentEssence: 
   spriteRender: {fileID: 1486692071}
-  stanceFastMovementSpeed: 25
-  stanceFastJumpForce: 15
-  stanceStrongMovementSpeed: 5
-  stanceStrongJumpForce: 5
+  airEssenceMovementSpeed: 15
+  airEssenceJumpForce: 13
+  airEssenceJumpMax: 3
+  earthEssenceMovementSpeed: 8
+  earthEssenceJumpForce: 10
+  earthEssenceJumpMax: 2
 --- !u!1 &1655136075
 GameObject:
   m_ObjectHideFlags: 0
