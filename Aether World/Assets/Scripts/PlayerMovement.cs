@@ -91,7 +91,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (groundCheck != null)
         {
-            jumpCount = -1;
+            jumpCount = 1; 
+            //On first player jump jumpCount is incremeneted by 1 but the groundCheck circle is too big so it immediately sets it back to 0.
             return true;
         }
         else
