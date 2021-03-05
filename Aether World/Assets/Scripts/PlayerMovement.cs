@@ -34,10 +34,6 @@ public class PlayerMovement : MonoBehaviour
 
     float movex;
 
-   
-
-    
-
     private void Awake()
     {
         SwitchEssence("AIR");
@@ -50,12 +46,12 @@ public class PlayerMovement : MonoBehaviour
         if(movex > 0)
         {
             IsFacingRight = true;
-            transform.localScale = new Vector3(1, 1, 1);
+            //transform.localScale = new Vector3(1, 1, 1);
         }
         else if (movex < 0)
         {
             IsFacingRight = false;
-            transform.localScale = new Vector3(-1, 1, 1);
+            //transform.localScale = new Vector3(-1, 1, 1);
         }
 
         if (Input.GetButtonDown("Jump") && ((jumpCount < jumpMax) || IsGrounded()))
@@ -95,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = movement;
             jumpCount++;
-            Debug.Log("Jumped?");
+            //Debug.Log("Jumped?");
         }
         else
         {

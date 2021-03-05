@@ -7,9 +7,16 @@ public class Projectile : MonoBehaviour
     public float ProjectileSpeed;
     public float ProjectileDamage;
 
+    public float TimeToLive;
+
     public Rigidbody2D rb;
 
+    public GameObject earthExplosion;
 
+    private void Start()
+    {
+        Destroy(gameObject, TimeToLive);
+    }
     private void FixedUpdate()
     {
         rb.velocity = transform.right * ProjectileSpeed;
@@ -17,6 +24,14 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        if (collision.collider.name != "Player")
+        {
+            if (name == "Rock(Clone)")
+            {
+                GameObject effect = Instantiate(earthExplosion, transform.position, Quaternion.identity);
+                Destroy(effect, 1.2f);
+            }
+            Destroy(gameObject);
+        }
     }
 }
