@@ -15,13 +15,17 @@ public class PlayerMovement : MonoBehaviour
     public int jumpCount = 0;
     public bool canResetJumps;
 
+    [HideInInspector] public bool IsFacingRight = true;
+
     public string currentEssence;
+    public string Projectile;
     public SpriteRenderer spriteRender;
 
     [Header("Air Essence Variables")]
     public float airEssenceMovementSpeed;
     public float airEssenceJumpForce;
     public int airEssenceJumpMax;
+    
 
     [Header("Earth Essence Variables")]
     public float earthEssenceMovementSpeed;
@@ -29,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
     public int earthEssenceJumpMax;
 
     float movex;
+
+   
+
+    
 
     private void Awake()
     {
@@ -38,6 +46,17 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         movex = Input.GetAxisRaw("Horizontal");
+
+        if(movex > 0)
+        {
+            IsFacingRight = true;
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if (movex < 0)
+        {
+            IsFacingRight = false;
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
 
         if (Input.GetButtonDown("Jump") && ((jumpCount < jumpMax) || IsGrounded()))
         {
@@ -119,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
                     jumpForce = airEssenceJumpForce;
                     jumpMax = airEssenceJumpMax;
                     spriteRender.color = Color.cyan;
+                    Projectile = "AirBlast";
                     break;
                 case "EARTH":
                     currentEssence = essence;
@@ -126,6 +146,7 @@ public class PlayerMovement : MonoBehaviour
                     jumpForce = earthEssenceJumpForce;
                     jumpMax = earthEssenceJumpMax;
                     spriteRender.color = Color.green;
+                    Projectile = "Rock";
                     break;
                 default:
                     break;
