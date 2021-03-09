@@ -21,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
     public string Projectile;
     public SpriteRenderer spriteRender;
 
+    [Header("Basic Essence Variables")]
+    public float BasicEssenceMovementSpeed;
+    public float BasicEssenceJumpForce;
+    public int BasicEssenceJumpMax;
+
     [Header("Air Essence Variables")]
     public float airEssenceMovementSpeed;
     public float airEssenceJumpForce;
@@ -36,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        SwitchEssence("AIR");
+        SwitchEssence("BASIC");
     }
 
     private void Update()
@@ -69,6 +74,11 @@ public class PlayerMovement : MonoBehaviour
         {
             SwitchEssence("EARTH");
             //Debug.Log("Switched to " + currentEssence + " essence!");
+        }
+        if (Input.GetButtonDown("Essence 0"))
+        {
+            SwitchEssence("BASIC");
+            //Debug.Log("Switched to " + currentEssence + " stance!");
         }
 
     }
@@ -104,9 +114,9 @@ public class PlayerMovement : MonoBehaviour
         //We dont want player clinging to walls in every stance we create, so we are gonna need to find a different way to do this.
         Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.5f, groundLayers);
 
-        if (groundCheck != null)
+        if (groundCheck != null && rb.velocity.y == 0)
         {
-            jumpCount = 1; 
+            jumpCount = 0; 
             //On first player jump jumpCount is incremeneted by 1 but the groundCheck circle is too big so it immediately sets it back to 0.
             return true;
         }
@@ -143,6 +153,14 @@ public class PlayerMovement : MonoBehaviour
                     jumpMax = earthEssenceJumpMax;
                     spriteRender.color = Color.green;
                     Projectile = "Rock";
+                    break;
+                case "BASIC":
+                    currentEssence = essence;
+                    movementSpeed = BasicEssenceMovementSpeed;
+                    jumpForce = BasicEssenceJumpForce;
+                    jumpMax = BasicEssenceJumpMax;
+                    spriteRender.color = Color.gray;
+                    Projectile = "BasicShot";
                     break;
                 default:
                     break;

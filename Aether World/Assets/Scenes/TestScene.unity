@@ -1910,6 +1910,9 @@ MonoBehaviour:
   currentEssence: 
   Projectile: 
   spriteRender: {fileID: 1486692071}
+  BasicEssenceMovementSpeed: 12
+  BasicEssenceJumpForce: 15
+  BasicEssenceJumpMax: 1
   airEssenceMovementSpeed: 15
   airEssenceJumpForce: 13
   airEssenceJumpMax: 3
@@ -1932,6 +1935,7 @@ MonoBehaviour:
   FiringPoint: {fileID: 392343677}
   AirProjectile: {fileID: 682628494062230447, guid: e1882648fcabe1348b4547101e6a0349, type: 3}
   EarthProjectile: {fileID: 32104252938819707, guid: 02ed4b52553a1ca45939a8d2720737a3, type: 3}
+  BasicProjectile: {fileID: 3120400438186215789, guid: be8b45fc3632faf469b8e8aaae61fa56, type: 3}
   camera: {fileID: 519420031}
   FireRotationPivot: {fileID: 1965868121}
   airBurstAmount: 3

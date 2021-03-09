@@ -8,6 +8,7 @@ public class PlayerShoot : MonoBehaviour
     public Transform FiringPoint;
     public GameObject AirProjectile;
     public GameObject EarthProjectile;
+    public GameObject BasicProjectile;
     float TimeUntilShoot;
     PlayerMovement pm;
 
@@ -34,8 +35,10 @@ public class PlayerShoot : MonoBehaviour
     {
 
         if (pm.currentEssence == "AIR")
-            FireRate = 0.25f;
+            FireRate = 1;
         else if (pm.currentEssence == "EARTH")
+            FireRate = 1.5f;
+        else if (pm.currentEssence == "BASIC")
             FireRate = 0.5f;
         if (Input.GetMouseButtonDown(0) && TimeUntilShoot < Time.time)//checks to see if the player can shoot yet
         {
@@ -91,6 +94,12 @@ public class PlayerShoot : MonoBehaviour
         {
             GameObject earthProjectile = Instantiate(EarthProjectile, FiringPoint.position, FiringPoint.rotation);
             earthProjectile.transform.localScale = earthPScale;
+        }
+        else if (pm.currentEssence == "BASIC")
+        {
+            GameObject basicProjectile = Instantiate(BasicProjectile, FiringPoint.position, FiringPoint.rotation);
+
+
         }
     }
 
