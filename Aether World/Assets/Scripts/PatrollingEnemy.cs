@@ -13,6 +13,7 @@ public class PatrollingEnemy : MonoBehaviour
 
     bool IsFacingRight = true;
     public bool flying;
+    Projectile pro;
 
     RaycastHit2D hit;
     private void Update()
@@ -58,5 +59,15 @@ public class PatrollingEnemy : MonoBehaviour
             }
         }
     }
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Projectile"))
+        {
+            pro = gameObject.GetComponent<Projectile>();
+            health = health - pro.ProjectileDamage;
+        }
+    }
+
+
 }
