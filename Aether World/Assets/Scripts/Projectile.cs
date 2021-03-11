@@ -12,6 +12,7 @@ public class Projectile : MonoBehaviour
     public Rigidbody2D rb;
 
     public GameObject earthExplosion;
+    public bool enemy;
 
     private void Start()
     {
@@ -24,13 +25,13 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.name != "Player")
+        if (collision.collider.name != "Player" && enemy == false)
         {
-            if (name == "Rock(Clone)")
+            /*if (name == "Rock(Clone)")
             {
                 GameObject effect = Instantiate(earthExplosion, transform.position, Quaternion.identity);
                 Destroy(effect, 1.2f);
-            }
+            }*/
             Destroy(gameObject);
         }
     }

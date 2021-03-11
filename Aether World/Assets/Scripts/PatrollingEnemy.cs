@@ -13,6 +13,7 @@ public class PatrollingEnemy : MonoBehaviour
 
     bool IsFacingRight = true;
     public bool flying;
+
     Projectile pro;
 
     RaycastHit2D hit;
@@ -64,8 +65,12 @@ public class PatrollingEnemy : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Projectile"))
         {
-            pro = gameObject.GetComponent<Projectile>();
-            health = health - pro.ProjectileDamage;
+            //Debug.Log("I was shot by " + collision.collider.name);
+            if (collision.collider.name == "BasicShot(Clone)")
+                health = health - 2;
+            if (collision.collider.name == "AirBlast(Clone)")
+                health = health - 1;
+
         }
     }
 
