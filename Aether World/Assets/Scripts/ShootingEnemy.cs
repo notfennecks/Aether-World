@@ -31,12 +31,24 @@ public class ShootingEnemy : MonoBehaviour
     {
         if (hit.collider == true)
         {
-            Debug.Log("A target is in range");
+            //Debug.Log("A target is in range");
             if(TimeUntilShoot < Time.time)
             {
                 TimeUntilShoot = Time.time + FireRate;
                 GameObject projectile = Instantiate(Projectile, FiringPoint.position, FiringPoint.rotation);
             }
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            //Debug.Log("I was shot by " + collision.collider.name);
+            if (collision.collider.name == "BasicShot(Clone)")
+                health = health - 2;
+            if (collision.collider.name == "AirBlast(Clone)")
+                health = health - 1;
+
         }
     }
 }

@@ -167,4 +167,17 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)//this is the player death
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            Destroy(gameObject);
+            LevelManager.instance.Respawn();
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+            LevelManager.instance.Respawn();
+        }
+    }
 }
