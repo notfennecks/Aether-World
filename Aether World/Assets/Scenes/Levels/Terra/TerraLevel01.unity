@@ -1724,17 +1724,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 5680307558521604435, guid: 1c34c2453ba4a4c45a4c769a3ca03bc8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7459735901068262411, guid: 1c34c2453ba4a4c45a4c769a3ca03bc8, type: 3}
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7459735901068262411, guid: 1c34c2453ba4a4c45a4c769a3ca03bc8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.4
+      value: 11.26
       objectReference: {fileID: 0}
     - target: {fileID: 7459735901068262411, guid: 1c34c2453ba4a4c45a4c769a3ca03bc8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.43
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 7459735901068262411, guid: 1c34c2453ba4a4c45a4c769a3ca03bc8, type: 3}
       propertyPath: m_LocalPosition.z

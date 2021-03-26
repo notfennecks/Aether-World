@@ -11,12 +11,18 @@ public class SocialSpace : MonoBehaviour
 
     bool canUseLevelSelectionBoard = false;  //If player can interact with level selection board
 
+    public SpriteRenderer selectionBoard;
+
 
     private void Update()
     {
         playerPosition = player.transform.position;  //Updates player position
-
         if (canUseLevelSelectionBoard == true && Input.GetKeyDown(KeyCode.E) == true)
+        {
+            SceneManager.LoadScene("LevelSelection");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) == true)
         {
             SceneManager.LoadScene("LevelSelection");
         }
@@ -27,6 +33,7 @@ public class SocialSpace : MonoBehaviour
         if (collision.name == "LevelSelectionBoard")  //If collider is named LevelSelectionBoard
         {
             canUseLevelSelectionBoard = true;  //Can use board
+            selectionBoard.color = Color.green;
         }
     }
 
@@ -35,6 +42,7 @@ public class SocialSpace : MonoBehaviour
         if (collision.name == "LevelSelectionBoard")
         {
             canUseLevelSelectionBoard = false;  //Cant use board
+            selectionBoard.color = Color.red;
         }
     }
 }

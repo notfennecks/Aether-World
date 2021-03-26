@@ -172,7 +172,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Projectile"))
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             //LevelManager.instance.Respawn();
             //Scene currentScene = SceneManager.GetActiveScene();
             //SceneManager.LoadScene(currentScene.name);
