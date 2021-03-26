@@ -17,10 +17,6 @@ public class MainMenu : MonoBehaviour
         {
             Debug.Log("Quit!");
             Application.Quit();
-            if (UnityEditor.EditorApplication.isPlaying == true)
-            {
-                UnityEditor.EditorApplication.isPlaying = false;
-            }
         }
     }
 }
