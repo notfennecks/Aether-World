@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/LevelSelection.unity
+    guid: 1262301e3c94db54e8ce4fd83dfb3364
+  - enabled: 1
+    path: Assets/Scenes/Levels/Terra/TerraLevel01.unity
+    guid: 3b2008fc47218e643b444c1fd6c40a75
+  - enabled: 1
+    path: Assets/Scenes/Levels/Overworld/OverworldLevel01.unity
+    guid: 186a7af544df6624eb14e8835dbf99d8
+  - enabled: 1
+    path: Assets/Scenes/SocialSpace.unity
+    guid: f9b4508a1c88e3b4490956c7b92e131e
   m_configObjects: {}

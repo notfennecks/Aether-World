@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SocialSpace : MonoBehaviour
 {
@@ -15,10 +16,9 @@ public class SocialSpace : MonoBehaviour
     {
         playerPosition = player.transform.position;  //Updates player position
 
-        if (canUseLevelSelectionBoard == true)
+        if (canUseLevelSelectionBoard == true && Input.GetKeyDown(KeyCode.E) == true)
         {
-            //Go to level selection UI
-            //Stop movement
+            SceneManager.LoadScene("LevelSelection");
         }
     }
 
