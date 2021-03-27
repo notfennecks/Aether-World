@@ -10,7 +10,8 @@ public class PlayerShoot : MonoBehaviour
     public GameObject EarthProjectile;
     public GameObject BasicProjectile;
     float TimeUntilShoot;
-    PlayerMovement pm;
+    EssenceManager em;
+    private Rigidbody2D player_rb;
 
     public new Camera camera;
     Vector2 mousePos;
@@ -27,18 +28,19 @@ public class PlayerShoot : MonoBehaviour
 
     private void Start()//this figures out which way the player is facing, see player movement to see how it works
     {
-        pm = gameObject.GetComponent<PlayerMovement>();
+        em = gameObject.GetComponent<EssenceManager>();
+        player_rb = GetComponent<Rigidbody2D>();
     }
 
 
     private void Update()
     {
 
-        if (pm.currentEssence == "AIR")
+        if (em.currentEssence == "AIR")
             FireRate = 1;
-        else if (pm.currentEssence == "EARTH")
+        else if (em.currentEssence == "EARTH")
             FireRate = 1.5f;
-        else if (pm.currentEssence == "BASIC")
+        else if (em.currentEssence == "BASIC")
             FireRate = 0.5f;
         if (Input.GetMouseButtonDown(0) && TimeUntilShoot < Time.time)//checks to see if the player can shoot yet
         {
@@ -58,7 +60,7 @@ public class PlayerShoot : MonoBehaviour
             earthChargedState = true;
             float chargeTime = Time.time - chargeStartTime;
         }
-        if (Input.GetMouseButtonUp(1) && TimeUntilShoot < Time.time && pm.currentEssence == "EARTH")
+        if (Input.GetMouseButtonUp(1) && TimeUntilShoot < Time.time && em.currentEssence == "EARTH")
         {
             float chargeTime = Time.time - chargeStartTime;
             if (chargeTime < 0.5)
@@ -75,7 +77,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 lookDir = mousePos - pm.rb.position;
+        Vector2 lookDir = mousePos - player_rb.position;
         angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         FireRotationPivot.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
@@ -84,18 +86,18 @@ public class PlayerShoot : MonoBehaviour
     {
         //GameObject airProjectile;
 
-        if (pm.currentEssence == "AIR")
+        if (em.currentEssence == "AIR")
         {
             //airProjectile = Instantiate(AirProjectile, FiringPoint.position, FiringPoint.rotation);
             StartCoroutine("AirBurst");
         }
 
-        else if (pm.currentEssence == "EARTH")
+        else if (em.currentEssence == "EARTH")
         {
             GameObject earthProjectile = Instantiate(EarthProjectile, FiringPoint.position, FiringPoint.rotation);
             earthProjectile.transform.localScale = earthPScale;
         }
-        else if (pm.currentEssence == "BASIC")
+        else if (em.currentEssence == "BASIC")
         {
             GameObject basicProjectile = Instantiate(BasicProjectile, FiringPoint.position, FiringPoint.rotation);
 
