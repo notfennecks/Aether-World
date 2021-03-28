@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2023109948759332561}
   - component: {fileID: 2023109948759332574}
   - component: {fileID: 2023109948759332563}
-  - component: {fileID: 5882573050592771328}
   - component: {fileID: 2023109948759332560}
+  - component: {fileID: 5882573050592771328}
   - component: {fileID: 2023109948759332562}
   - component: {fileID: 2023109948759332565}
   - component: {fileID: 7686689109164606855}
@@ -36,7 +36,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2023109949796872377}
-  - {fileID: 2023109949243231857}
   - {fileID: 2023109949087419488}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: be981308a0c2d7648ba5a6b10022e187, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -118,18 +117,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5882573050592771328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023109948759332575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9ef89e12a5088e448f514a2c4e5d99a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &2023109948759332560
 Rigidbody2D:
   serializedVersion: 4
@@ -144,13 +131,25 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.1
+  m_AngularDrag: 0.05
   m_GravityScale: 3
   m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Interpolate: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &5882573050592771328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023109948759332575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ef89e12a5088e448f514a2c4e5d99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2023109948759332562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,10 +163,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0
+  acceleration: 0
+  decceleration: 0
   jumpForce: 0
   rb: {fileID: 2023109948759332560}
-  feet: {fileID: 2023109949243231857}
-  groundLayers:
+  groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
   jumpMax: 1
@@ -220,15 +220,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentEssence: 
-  BasicEssenceMovementSpeed: 10
-  BasicEssenceJumpForce: 10
-  BasicEssenceJumpMax: 2
-  airEssenceMovementSpeed: 15
-  airEssenceJumpForce: 15
-  airEssenceJumpMax: 3
-  earthEssenceMovementSpeed: 7
-  earthEssenceJumpForce: 10
-  earthEssenceJumpMax: 1
+  basicMoveSpeed: 10
+  basicJumpForce: 10
+  basicMaxJumps: 2
+  airMoveSpeed: 20
+  airJumpForce: 15
+  airMaxJumps: 3
+  earthMoveSpeed: 8
+  earthJumpForce: 8
+  earthMaxJumps: 1
 --- !u!1 &2023109949087419489
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,36 +257,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2023109949653284932}
-  m_Father: {fileID: 2023109948759332561}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2023109949243231870
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2023109949243231857}
-  m_Layer: 0
-  m_Name: Feet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2023109949243231857
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023109949243231870}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
   m_Father: {fileID: 2023109948759332561}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

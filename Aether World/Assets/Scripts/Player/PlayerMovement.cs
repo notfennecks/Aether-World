@@ -5,11 +5,16 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed;
+    [Range(0.0f, 10.0f)]
+    public float acceleration;
+    [Range(0.0f, 10.0f)]
+    public float decceleration;
     public float jumpForce;
+    private float cutJumpForce = 0.5f;  //Variable for if you hold jump the higher you jump
     public Rigidbody2D rb;
 
-    public Transform feet;
-    public LayerMask groundLayers;
+    [SerializeField] private LayerMask groundLayerMask;
+    private BoxCollider2D playerHitbox;
 
     public int jumpMax = 0;
     public int jumpCount = 0;
@@ -18,6 +23,11 @@ public class PlayerMovement : MonoBehaviour
 
     float movex;
 
+
+    private void Start()
+    {
+        playerHitbox = GetComponent<BoxCollider2D>();
+    }
     private void Update()
     {
         movex = Input.GetAxisRaw("Horizontal");
@@ -38,17 +48,23 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
-        
+        if (Input.GetButtonUp("Jump"))
+        {
+            if (rb.velocity.y > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * cutJumpForce);
+            }
+        }
 
+        IsGrounded();
     }
 
     private void FixedUpdate()
     {
-        Vector2 movement = new Vector2(movex * movementSpeed, rb.velocity.y);
-
+        Vector2 movement = new Vector2(rb.velocity.x, rb.velocity.y);
+        movement.x = Mathf.Clamp(movement.x, -movementSpeed, movementSpeed);
+        movement.x = movex * movementSpeed;
         rb.velocity = movement;
-
-        IsGrounded();
     }
 
 
@@ -60,26 +76,27 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = movement;
             jumpCount++;
-            //Debug.Log("Jumped?");
-        }
-        else
-        {
-            Debug.Log("Already used " + jumpMax + " jumps");
         }
     }
 
     public bool IsGrounded()
     {
-        Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.5f, groundLayers);
+        float extraHeight = 0.2f;
+        RaycastHit2D raycastHit = Physics2D.BoxCast(playerHitbox.bounds.center, playerHitbox.bounds.size, 0f, Vector2.down, extraHeight, groundLayerMask);
+        Color rayColor;
 
-        if (groundCheck != null && rb.velocity.y == 0)
+        if ( raycastHit.collider != null && rb.velocity.y == 0)
         {
+            rayColor = Color.green;
             jumpCount = 0;
-            return true;
         }
         else
         {
-            return false;
+            rayColor = Color.red;
         }
+        //Debug.DrawRay(playerHitbox.bounds.center + new Vector3(playerHitbox.bounds.extents.x, -playerHitbox.bounds.extents.y), Vector2.down * extraHeight, rayColor);
+        //Debug.DrawRay(playerHitbox.bounds.center + new Vector3(-playerHitbox.bounds.extents.x, -playerHitbox.bounds.extents.y), Vector2.down * extraHeight, rayColor);
+        //Debug.DrawRay(playerHitbox.bounds.center + new Vector3(playerHitbox.bounds.extents.x, -playerHitbox.bounds.extents.y - extraHeight), Vector2.left * playerHitbox.bounds.extents.x * 2, rayColor);
+        return raycastHit.collider != null;
     }
 }

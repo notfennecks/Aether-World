@@ -9,19 +9,19 @@ public class EssenceManager : MonoBehaviour
     private SpriteRenderer playerSprite;
 
     [Header("Basic Essence Variables")]
-    public float BasicEssenceMovementSpeed;
-    public float BasicEssenceJumpForce;
-    public int BasicEssenceJumpMax;
+    public float basicMoveSpeed;
+    public float basicJumpForce;
+    public int basicMaxJumps;
 
     [Header("Air Essence Variables")]
-    public float airEssenceMovementSpeed;
-    public float airEssenceJumpForce;
-    public int airEssenceJumpMax;
+    public float airMoveSpeed;
+    public float airJumpForce;
+    public int airMaxJumps;
 
     [Header("Earth Essence Variables")]
-    public float earthEssenceMovementSpeed;
-    public float earthEssenceJumpForce;
-    public int earthEssenceJumpMax;
+    public float earthMoveSpeed;
+    public float earthJumpForce;
+    public int earthMaxJumps;
 
     private void Awake()
     {
@@ -69,27 +69,24 @@ public class EssenceManager : MonoBehaviour
             {
                 case "AIR":
                     currentEssence = essence;
-                    pm.movementSpeed = airEssenceMovementSpeed;
-                    pm.jumpForce = airEssenceJumpForce;
-                    pm.jumpMax = airEssenceJumpMax;
+                    pm.movementSpeed = airMoveSpeed;
+                    pm.jumpForce = airJumpForce;
+                    pm.jumpMax = airMaxJumps;
                     playerSprite.color = Color.cyan;
-                    //Projectile = "AirBlast";
                     break;
                 case "EARTH":
                     currentEssence = essence;
-                    pm.movementSpeed = earthEssenceMovementSpeed;
-                    pm.jumpForce = earthEssenceJumpForce;
-                    pm.jumpMax = earthEssenceJumpMax;
+                    pm.movementSpeed = earthMoveSpeed;
+                    pm.jumpForce = earthJumpForce;
+                    pm.jumpMax = earthMaxJumps;
                     playerSprite.color = Color.green;
-                    //Porjectile = "Rock";
                     break;
                 case "BASIC":
                     currentEssence = essence;
-                    pm.movementSpeed = BasicEssenceMovementSpeed;
-                    pm.jumpForce = BasicEssenceJumpForce;
-                    pm.jumpMax = BasicEssenceJumpMax;
+                    pm.movementSpeed = basicMoveSpeed;
+                    pm.jumpForce = basicJumpForce;
+                    pm.jumpMax = basicMaxJumps;
                     playerSprite.color = Color.gray;
-                    //Projectile = "BasicShot";
                     break;
                 default:
                     break;
