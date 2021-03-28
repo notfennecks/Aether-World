@@ -123,6 +123,28 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &315353604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2023109948759332575, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+  m_PrefabInstance: {fileID: 2023109949974300729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &315353614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315353604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f5e0b63a58d4d49aaee0fced6ad22a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FireRate: 0.5
+  FiringPoint: {fileID: 2002166573}
+  watershield: {fileID: 247903950651804979, guid: f0b1165ece190874b99377c056a73686, type: 3}
+  camera: {fileID: 1481522526}
+  FireRotationPivot: {fileID: 1057486476}
 --- !u!1 &365125595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1059,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1057486476 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2023109949087419488, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+  m_PrefabInstance: {fileID: 2023109949974300729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1234163579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,6 +1500,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!20 &1481522526 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2023109949796872262, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+  m_PrefabInstance: {fileID: 2023109949974300729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1655136075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,6 +1723,11 @@ Transform:
   m_Father: {fileID: 365125596}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2002166573 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2023109949653284932, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+  m_PrefabInstance: {fileID: 2023109949974300729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2023109949974300729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1698,6 +1735,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3883050234094483721, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+      propertyPath: airMoveSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: -3883050234094483721, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+      propertyPath: waterMaxJumps
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -3883050234094483721, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+      propertyPath: basicJumpForce
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -3883050234094483721, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+      propertyPath: basicMoveSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -3883050234094483721, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+      propertyPath: earthMoveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -3883050234094483721, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+      propertyPath: waterJumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -3883050234094483721, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+      propertyPath: waterMoveSpeed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2023109948759332560, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
       propertyPath: m_Material
       value: 

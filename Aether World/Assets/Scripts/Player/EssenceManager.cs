@@ -23,6 +23,11 @@ public class EssenceManager : MonoBehaviour
     public float earthJumpForce;
     public int earthMaxJumps;
 
+    [Header("Water Essence Variables")]
+    public float waterMoveSpeed;
+    public float waterJumpForce;
+    public int waterMaxJumps;
+
     private void Awake()
     {
         pm = GetComponent<PlayerMovement>();
@@ -46,6 +51,11 @@ public class EssenceManager : MonoBehaviour
         if (Input.GetButtonDown("Essence 2"))
         {
             SwitchEssence("EARTH");
+            //Debug.Log("Switched to " + currentEssence + " essence!");
+        }
+        if (Input.GetButtonDown("Essence 3"))
+        {
+            SwitchEssence("WATER");
             //Debug.Log("Switched to " + currentEssence + " essence!");
         }
         if (Input.GetButtonDown("Essence 0"))
@@ -80,6 +90,13 @@ public class EssenceManager : MonoBehaviour
                     pm.jumpForce = earthJumpForce;
                     pm.jumpMax = earthMaxJumps;
                     playerSprite.color = Color.green;
+                    break;
+                case "WATER":
+                    currentEssence = essence;
+                    pm.movementSpeed = waterMoveSpeed;
+                    pm.jumpForce = waterJumpForce;
+                    pm.jumpMax = waterMaxJumps;
+                    playerSprite.color = Color.blue;
                     break;
                 case "BASIC":
                     currentEssence = essence;
