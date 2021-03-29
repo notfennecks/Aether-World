@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed;
-    [Range(0.0f, 10.0f)]
+    public bool canAccelDeccel;
+    [Range(0.1f, 100.0f)]
     public float acceleration;
-    [Range(0.0f, 10.0f)]
+    [Range(0.1f, 100.0f)]
     public float decceleration;
     public float jumpForce;
     private float cutJumpForce = 0.5f;  //Variable for if you hold jump the higher you jump
@@ -61,14 +62,42 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 movement = new Vector2(rb.velocity.x, rb.velocity.y);
-        movement.x = Mathf.Clamp(movement.x, -movementSpeed, movementSpeed);
-        movement.x = movex * movementSpeed;
-        rb.velocity = movement;
+        Move();
     }
 
+    private void Move()
+    {
+        Vector2 movement = new Vector2(rb.velocity.x, rb.velocity.y);   
+        if (canAccelDeccel == false)
+        {
+            movement.x = movementSpeed * movex;
+        }
+        else
+        {
+            movement.x += movementSpeed * movex * acceleration * Time.deltaTime;
+            if (movement.x > 0 && movex == 0)
+            {
+                movement.x -= movementSpeed * decceleration * Time.deltaTime;
+                if (rb.velocity.x < 0)
+                {
+                    movement.x = 0;
+                }
+            }
+            if (movement.x < 0 && movex == 0)
+            {
+                movement.x += movementSpeed * decceleration * Time.deltaTime;
+                if (rb.velocity.x > 0)
+                {
+                    movement.x = 0;
+                }
+            }
+        }
+        movement.x = Mathf.Clamp(movement.x, -movementSpeed, movementSpeed);
+        rb.velocity = movement;
+        Debug.Log(movement.x);
+    }
 
-    void Jump()
+    private void Jump()
     {
         Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
 

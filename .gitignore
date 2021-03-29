@@ -26,6 +26,8 @@
 # Visual Studio cache directory
 .vs/
 
+Aether World/Library/PackageCache/com.unity.cinemachine@2.6.4/Samples~/Nested Timeline Scrub Bubble/CinemachineTimelineEditorExtensions/TimelineEditorExtensions/TimelineEditorExtensions.asmref.meta
+
 # Gradle cache directory
 .gradle/
 
