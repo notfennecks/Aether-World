@@ -94,7 +94,6 @@ public class PlayerMovement : MonoBehaviour
         }
         movement.x = Mathf.Clamp(movement.x, -movementSpeed, movementSpeed);
         rb.velocity = movement;
-        Debug.Log(movement.x);
     }
 
     private void Jump()
