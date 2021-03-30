@@ -26,7 +26,7 @@ public class AquaAegis : MonoBehaviour
     void Update()
     {
         aquaAegis.transform.position = player.transform.position;
-        if (em.currentEssence == "WATER" && Input.GetKeyDown(KeyCode.E))
+        if (em.currentEssence == "WATER" && Input.GetMouseButtonDown(1))
         {
             aquaAegis.SetActive(true);
             pm.movementSpeed *= aegisMoveMulti;
@@ -36,7 +36,7 @@ public class AquaAegis : MonoBehaviour
             aquaAegis.SetActive(false);
             pm.movementSpeed = baseWaterMoveSpeed;
         }
-        else if (Input.GetKeyUp(KeyCode.E))
+        else if (Input.GetMouseButtonUp(1))
         {
             aquaAegis.SetActive(false);
             pm.movementSpeed = baseWaterMoveSpeed;
