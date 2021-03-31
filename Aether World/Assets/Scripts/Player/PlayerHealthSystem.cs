@@ -1,34 +1,89 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public int maxHealth;
+    private int currentHealth;
+    public int maxAether;
+    private int currentAether;
+    public Slider healthSlider;
+    public Slider healthEffectSlider;
+    [SerializeField] private float healthEffectSpeed;
+    public Slider aetherSlider;
+    public Slider aetherEffectSlider;
+    [SerializeField] private float aetherEffectSpeed;
+    public float aetherRegenRate;
+
     void Start()
     {
-        
+        currentHealth = maxHealth;
+        healthSlider.maxValue = maxHealth;
+        healthSlider.value = maxHealth;
+
+        currentAether = maxAether;
+        aetherSlider.maxValue = maxAether;
+        aetherSlider.value = maxAether;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-    }
-    private void OnCollisionEnter2D(Collision2D collision)//this is the player death
-    {
-        if (collision.gameObject.CompareTag("Projectile"))
+        if (Input.GetKeyDown(KeyCode.H))
         {
-            //Destroy(gameObject);
-            //LevelManager.instance.Respawn();
-            //Scene currentScene = SceneManager.GetActiveScene();
-            //SceneManager.LoadScene(currentScene.name);
+            takeDamage(20);
         }
-        if (collision.gameObject.CompareTag("Enemy"))
+
+        if (Input.GetKeyDown(KeyCode.G))
         {
-            //Destroy(gameObject);
-            //LevelManager.instance.Respawn();
+            consumeAether(20);
         }
+
+        //Health Slider Effect-----------------------------
+        if (healthEffectSlider.value > healthSlider.value)
+        {
+            healthEffectSlider.value -= healthEffectSpeed;
+        }
+        else
+        {
+            healthEffectSlider.value = healthSlider.value;
+        }
+        //-------------------------------------------------
+
+        //Aether Slider Effect-----------------------------
+        if (aetherEffectSlider.value > aetherSlider.value)
+        {
+            aetherEffectSlider.value -= aetherEffectSpeed;
+        }
+        else
+        {
+            aetherEffectSlider.value = aetherSlider.value;
+        }
+        //-------------------------------------------------
+
+        if (aetherSlider.value < maxAether)
+        {
+            regenAether();
+        }
+
     }
 
+    void consumeAether(int amount)
+    {
+        currentAether -= amount;
+        aetherSlider.value = currentAether;
+    }
+
+    void regenAether()
+    {
+        aetherSlider.value += aetherRegenRate;
+    }
+
+    void takeDamage(int amount)
+    {
+        currentHealth -= amount;
+        healthSlider.value = currentHealth;
+    }
 }
