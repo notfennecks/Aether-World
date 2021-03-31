@@ -7,6 +7,7 @@ public class EssenceManager : MonoBehaviour
     PlayerMovement pm;
     public string currentEssence;
     private SpriteRenderer playerSprite;
+    private EssenceIconManager eiconmanage;
 
     [Header("Basic Essence Variables")]
     public float basicMoveSpeed;
@@ -28,6 +29,11 @@ public class EssenceManager : MonoBehaviour
     public float waterJumpForce;
     public int waterMaxJumps;
 
+    [Header("Fire Essence Variables")]
+    public float fireMoveSpeed;
+    public float fireJumpForce;
+    public int fireMaxJumps;
+
     private void Awake()
     {
         pm = GetComponent<PlayerMovement>();
@@ -36,6 +42,7 @@ public class EssenceManager : MonoBehaviour
     void Start()
     {
         playerSprite = GetComponent<SpriteRenderer>();
+        eiconmanage = GetComponentInChildren<EssenceIconManager>();
         SwitchEssence("BASIC");
     }
 
@@ -57,6 +64,11 @@ public class EssenceManager : MonoBehaviour
         {
             SwitchEssence("WATER");
             //Debug.Log("Switched to " + currentEssence + " essence!");
+        }
+        if (Input.GetButtonDown("Essence 4"))
+        {
+            SwitchEssence("FIRE");
+            //Debug.Log("Switched to " + currentEssence + " stance!");
         }
         if (Input.GetButtonDown("Essence 0"))
         {
@@ -83,6 +95,7 @@ public class EssenceManager : MonoBehaviour
                     pm.jumpForce = airJumpForce;
                     pm.jumpMax = airMaxJumps;
                     playerSprite.color = Color.cyan;
+                    eiconmanage.switchEssenceIcon("AIR");
                     break;
                 case "EARTH":
                     currentEssence = essence;
@@ -90,6 +103,7 @@ public class EssenceManager : MonoBehaviour
                     pm.jumpForce = earthJumpForce;
                     pm.jumpMax = earthMaxJumps;
                     playerSprite.color = Color.green;
+                    eiconmanage.switchEssenceIcon("EARTH");
                     break;
                 case "WATER":
                     currentEssence = essence;
@@ -97,6 +111,15 @@ public class EssenceManager : MonoBehaviour
                     pm.jumpForce = waterJumpForce;
                     pm.jumpMax = waterMaxJumps;
                     playerSprite.color = Color.blue;
+                    eiconmanage.switchEssenceIcon("WATER");
+                    break;
+                case "FIRE":
+                    currentEssence = essence;
+                    pm.movementSpeed = fireMoveSpeed;
+                    pm.jumpForce = fireJumpForce;
+                    pm.jumpMax = fireMaxJumps;
+                    playerSprite.color = Color.red;
+                    eiconmanage.switchEssenceIcon("FIRE");
                     break;
                 case "BASIC":
                     currentEssence = essence;
@@ -104,6 +127,7 @@ public class EssenceManager : MonoBehaviour
                     pm.jumpForce = basicJumpForce;
                     pm.jumpMax = basicMaxJumps;
                     playerSprite.color = Color.gray;
+                    eiconmanage.switchEssenceIcon("BASIC");
                     break;
                 default:
                     break;
