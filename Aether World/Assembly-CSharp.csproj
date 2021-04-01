@@ -65,14 +65,14 @@
     <Compile Include="Assets\Scripts\Player\EssenceManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealthSystem.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Enemies\PixieAI.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Pixie\PixieAI.cs" />
     <Compile Include="Assets\Scripts\Enemies\PatrollingEnemy.cs" />
     <Compile Include="Assets\Scripts\SocialSpace.cs" />
     <Compile Include="Assets\Scripts\UI\LevelSelection.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerTopDownMovement.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerManager.cs" />
-    <Compile Include="Assets\Scripts\Enemies\PixieWindGust.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Pixie\PixieWindGust.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
