@@ -1698,63 +1698,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 372609113, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_Name
-      value: CM Vcam Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 372609114, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.79999983
-      objectReference: {fileID: 0}
-    - target: {fileID: 1499785319, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_ScreenY
-      value: 0.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 1499785319, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_XDamping
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1499785319, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_YDamping
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1499785319, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_DeadZoneWidth
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1499785319, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_LookaheadTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1499785319, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_SoftZoneWidth
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1499785319, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_DeadZoneHeight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1499785319, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_SoftZoneHeight
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1499785319, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_LookaheadIgnoreY
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1499785319, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_LookaheadSmoothing
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 137665709758453738, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 137665709758453738, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 390049716073748139, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -1806,39 +1754,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2023109949796872261, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_Name
-      value: Player Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 2023109949796872377, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2023109949796872377, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2065679577290928471, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_Value
-      value: 54
-      objectReference: {fileID: 0}
-    - target: {fileID: 2366533590183198379, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_FillAmount
-      value: 0.54
-      objectReference: {fileID: 0}
     - target: {fileID: 3067612350810431838, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3067612350810431838, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7321140822183419430, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7321140822183419430, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}

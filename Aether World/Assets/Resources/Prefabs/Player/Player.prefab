@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 372609114}
   - component: {fileID: 372609115}
   m_Layer: 0
-  m_Name: CM vcam1
+  m_Name: CM Vcam Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372609113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.79999983, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1499785318}
@@ -127,19 +127,19 @@ MonoBehaviour:
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_XDamping: 0
-  m_YDamping: 0
+  m_XDamping: 0.1
+  m_YDamping: 0.1
   m_ZDamping: 0
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.46
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneWidth: 0.5
+  m_SoftZoneHeight: 0.5
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -467,12 +467,12 @@ GameObject:
   - component: {fileID: 2023109948759332563}
   - component: {fileID: 2023109948759332560}
   - component: {fileID: 5882573050592771328}
+  - component: {fileID: 4845483178440164586}
   - component: {fileID: 2023109948759332562}
   - component: {fileID: 2023109948759332565}
   - component: {fileID: 7686689109164606855}
   - component: {fileID: -3883050234094483721}
   - component: {fileID: 2763835431524754283}
-  - component: {fileID: 4845483178440164586}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -608,6 +608,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9ef89e12a5088e448f514a2c4e5d99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &4845483178440164586
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023109948759332575}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3acb4f283e2028540af9bbc9865a0153, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2023109948759332562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,6 +695,7 @@ MonoBehaviour:
   aetherEffectSlider: {fileID: 5141246191526185202}
   aetherEffectSpeed: 0.03
   aetherRegenRate: 0.02
+  isDying: 0
 --- !u!114 &-3883050234094483721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,25 +737,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aegisMoveMulti: 0.2
---- !u!95 &4845483178440164586
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023109948759332575}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3acb4f283e2028540af9bbc9865a0153, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2023109949087419489
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +811,7 @@ GameObject:
   - component: {fileID: 2023109949796872260}
   - component: {fileID: 1132255971}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Player Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -824,7 +825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023109949796872261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.79999983, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2023109948759332561}

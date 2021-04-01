@@ -10,6 +10,7 @@ public class PlayerHealthSystem : MonoBehaviour
     private int currentHealth;
     public int maxAether;
     private int currentAether;
+    private GameObject player;
     public Slider healthSlider;
     public Slider healthEffectSlider;
     [SerializeField] private float healthEffectSpeed;
@@ -17,9 +18,12 @@ public class PlayerHealthSystem : MonoBehaviour
     public Slider aetherEffectSlider;
     [SerializeField] private float aetherEffectSpeed;
     public float aetherRegenRate;
+    [HideInInspector] public bool isDying;
+    private PlayerMovement pm;
 
     void Start()
     {
+        pm = GetComponent<PlayerMovement>();
         currentHealth = maxHealth;
         healthSlider.maxValue = maxHealth;
         healthSlider.value = maxHealth;
@@ -41,7 +45,11 @@ public class PlayerHealthSystem : MonoBehaviour
             consumeAether(20);
         }
 
-
+        if (currentHealth <= 0)
+        {
+            isDying = true;
+            pm.animator.SetBool("IsDying", true);
+        }
 
         //Health Slider Effect-----------------------------
         if (healthEffectSlider.value > healthSlider.value)
