@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     private float cutJumpForce = 0.5f;  //Variable for if you hold jump the higher you jump
     public Rigidbody2D rb;
+    public Animator animator;
 
     [SerializeField] private LayerMask groundLayerMask;
     private BoxCollider2D playerHitbox;
@@ -33,15 +34,17 @@ public class PlayerMovement : MonoBehaviour
     {
         movex = Input.GetAxisRaw("Horizontal");
 
+        animator.SetFloat("Speed.x", Mathf.Abs(movex));
+
         if(movex > 0)
         {
             IsFacingRight = true;
-            //transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else if (movex < 0)
         {
             IsFacingRight = false;
-            //transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
 
         if (Input.GetButtonDown("Jump") && ((jumpCount < jumpMax) || IsGrounded()))
@@ -55,6 +58,22 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * cutJumpForce);
             }
+        }
+
+        if (rb.velocity.y > 0)
+        {
+            animator.SetBool("IsJumpingUp", true);
+            animator.SetBool("IsJumpingDown", false);
+        }
+        else if (rb.velocity.y < 0)
+        {
+            animator.SetBool("IsJumpingUp", false);
+            animator.SetBool("IsJumpingDown", true);
+        }
+        else
+        {
+            animator.SetBool("IsJumpingUp", false);
+            animator.SetBool("IsJumpingDown", false);
         }
 
         IsGrounded();

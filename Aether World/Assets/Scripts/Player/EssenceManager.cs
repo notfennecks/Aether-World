@@ -94,7 +94,7 @@ public class EssenceManager : MonoBehaviour
                     pm.movementSpeed = airMoveSpeed;
                     pm.jumpForce = airJumpForce;
                     pm.jumpMax = airMaxJumps;
-                    playerSprite.color = Color.cyan;
+                    //playerSprite.color = Color.cyan;
                     eiconmanage.switchEssenceIcon("AIR");
                     break;
                 case "EARTH":
@@ -102,7 +102,7 @@ public class EssenceManager : MonoBehaviour
                     pm.movementSpeed = earthMoveSpeed;
                     pm.jumpForce = earthJumpForce;
                     pm.jumpMax = earthMaxJumps;
-                    playerSprite.color = Color.green;
+                    //playerSprite.color = Color.green;
                     eiconmanage.switchEssenceIcon("EARTH");
                     break;
                 case "WATER":
@@ -110,7 +110,7 @@ public class EssenceManager : MonoBehaviour
                     pm.movementSpeed = waterMoveSpeed;
                     pm.jumpForce = waterJumpForce;
                     pm.jumpMax = waterMaxJumps;
-                    playerSprite.color = Color.blue;
+                    //playerSprite.color = Color.blue;
                     eiconmanage.switchEssenceIcon("WATER");
                     break;
                 case "FIRE":
@@ -118,7 +118,7 @@ public class EssenceManager : MonoBehaviour
                     pm.movementSpeed = fireMoveSpeed;
                     pm.jumpForce = fireJumpForce;
                     pm.jumpMax = fireMaxJumps;
-                    playerSprite.color = Color.red;
+                    //playerSprite.color = Color.red;
                     eiconmanage.switchEssenceIcon("FIRE");
                     break;
                 case "BASIC":
@@ -126,7 +126,7 @@ public class EssenceManager : MonoBehaviour
                     pm.movementSpeed = basicMoveSpeed;
                     pm.jumpForce = basicJumpForce;
                     pm.jumpMax = basicMaxJumps;
-                    playerSprite.color = Color.gray;
+                    //playerSprite.color = Color.gray;
                     eiconmanage.switchEssenceIcon("BASIC");
                     break;
                 default:

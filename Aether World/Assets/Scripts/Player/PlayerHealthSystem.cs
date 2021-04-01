@@ -41,6 +41,8 @@ public class PlayerHealthSystem : MonoBehaviour
             consumeAether(20);
         }
 
+
+
         //Health Slider Effect-----------------------------
         if (healthEffectSlider.value > healthSlider.value)
         {
@@ -79,6 +81,7 @@ public class PlayerHealthSystem : MonoBehaviour
     void regenAether()
     {
         aetherSlider.value += aetherRegenRate;
+        currentAether = (int)aetherSlider.value;
     }
 
     void takeDamage(int amount)
