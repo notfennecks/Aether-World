@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.velocity = transform.right * ProjectileSpeed;
+        rb.velocity = -transform.right * ProjectileSpeed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

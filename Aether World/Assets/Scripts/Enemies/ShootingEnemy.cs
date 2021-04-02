@@ -22,7 +22,7 @@ public class ShootingEnemy : MonoBehaviour
     {
         if (IsFacingRight == true)
             hit = Physics2D.Raycast(ShootRange.position, transform.right, 5f, TargetLayers);//checking when a flying enemy should turn around will be different
-        else
+        else if (IsFacingRight == false)
             hit = Physics2D.Raycast(ShootRange.position, -transform.right, 5f, TargetLayers);//Where the ray is cast is slightly different.
         if (health <= 0)
             Destroy(gameObject);
