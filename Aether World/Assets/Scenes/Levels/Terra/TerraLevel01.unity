@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RespwanPoint: {fileID: 583627895}
   PlayerPrefab: {fileID: 1070773899}
+  GoalPoint: {fileID: 0}
 --- !u!4 &583627895
 Transform:
   m_ObjectHideFlags: 0
@@ -318,6 +319,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2023109948759332575, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
   m_PrefabInstance: {fileID: 1070773898}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1070773900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070773899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a67f53954cb23bb46971c6b0b055a1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CoolDownTime: 10
 --- !u!4 &1699458349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2982331935027668086, guid: 1c34c2453ba4a4c45a4c769a3ca03bc8, type: 3}
