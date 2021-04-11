@@ -1896,6 +1896,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2023109948759332565, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+      propertyPath: FireProjectile
+      value: 
+      objectReference: {fileID: 3390939590627159097, guid: 0f8c58d889c4232409d17ba323407470, type: 3}
+    - target: {fileID: 2023109948759332565, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
+      propertyPath: WaterProjectile
+      value: 
+      objectReference: {fileID: 2288033288090838278, guid: 4d6f1e1c381f08049adef450e1f0710e, type: 3}
     - target: {fileID: 2023109948759332575, guid: 048b6808dfc0e0f468f4ed7c9ba1c50a, type: 3}
       propertyPath: m_Name
       value: Player

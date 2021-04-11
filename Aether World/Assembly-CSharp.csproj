@@ -52,9 +52,11 @@
      <Compile Include="Assets\Scripts\Player\PlayerShoot.cs" />
      <Compile Include="Assets\Scripts\Player\Abilities\AquaAegis.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Player\Abilities\AirJump.cs" />
      <Compile Include="Assets\Scripts\Player\EssenceIconManager.cs" />
      <Compile Include="Assets\Scripts\Player\EssenceManager.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealthSystem.cs" />
+     <Compile Include="Assets\Scripts\GoalPoint.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Enemies\Pixie\PixieAI.cs" />
      <Compile Include="Assets\Scripts\Enemies\PatrollingEnemy.cs" />

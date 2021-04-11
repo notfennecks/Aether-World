@@ -9,6 +9,8 @@ public class PlayerShoot : MonoBehaviour
     public GameObject AirProjectile;
     public GameObject EarthProjectile;
     public GameObject BasicProjectile;
+    public GameObject WaterProjectile;
+    public GameObject FireProjectile;
     float TimeUntilShoot;
     EssenceManager em;
     private Rigidbody2D player_rb;
@@ -40,6 +42,10 @@ public class PlayerShoot : MonoBehaviour
             FireRate = 1;
         else if (em.currentEssence == "EARTH")
             FireRate = 1.5f;
+        else if (em.currentEssence == "WATER")
+            FireRate = 1.25f;
+        else if (em.currentEssence == "FIRE")
+            FireRate = 0.5f;
         else if (em.currentEssence == "BASIC")
             FireRate = 0.5f;
         if (Input.GetMouseButtonDown(0) && TimeUntilShoot < Time.time)//checks to see if the player can shoot yet
@@ -100,6 +106,18 @@ public class PlayerShoot : MonoBehaviour
         else if (em.currentEssence == "BASIC")
         {
             GameObject basicProjectile = Instantiate(BasicProjectile, FiringPoint.position, FiringPoint.rotation);
+
+
+        }
+        else if (em.currentEssence == "FIRE")
+        {
+            GameObject fireProjectile = Instantiate(FireProjectile, FiringPoint.position, FiringPoint.rotation);
+
+
+        }
+        else if (em.currentEssence == "WATER")
+        {
+            GameObject waterProjectile = Instantiate(WaterProjectile, FiringPoint.position, FiringPoint.rotation);
 
 
         }
