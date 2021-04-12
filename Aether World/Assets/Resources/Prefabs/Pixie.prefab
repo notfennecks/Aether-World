@@ -40,8 +40,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8987624145702701161}
   - component: {fileID: 8839838533616515540}
+  - component: {fileID: 6953903583555114100}
   - component: {fileID: 7168022690185352717}
   - component: {fileID: 5685290012007959665}
+  - component: {fileID: 4028686004379302149}
   m_Layer: 0
   m_Name: Pixie
   m_TagString: Untagged
@@ -77,11 +79,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  detectionDist: 10
+  detectionDist: 15
   attackRange: 5
   fireRate: 2
   windGust: {fileID: 8028402043648755487, guid: 6c8aa59c4fb0a2544a3b6f217f564753, type: 3}
   windGustParent: {fileID: 5194200408478586707}
+--- !u!114 &6953903583555114100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8987624145702701162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f9ff5a9ce0df3428f7ca85ecb6c124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
 --- !u!212 &7168022690185352717
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -152,3 +167,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &4028686004379302149
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8987624145702701162}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.13529587, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.63529587

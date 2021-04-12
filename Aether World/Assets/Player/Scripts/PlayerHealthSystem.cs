@@ -80,19 +80,19 @@ public class PlayerHealthSystem : MonoBehaviour
 
     }
 
-    void consumeAether(int amount)
+    public void consumeAether(int amount)
     {
         currentAether -= amount;
         aetherSlider.value = currentAether;
     }
 
-    void regenAether()
+    public void regenAether()
     {
         aetherSlider.value += aetherRegenRate;
         currentAether = (int)aetherSlider.value;
     }
 
-    void takeDamage(int amount)
+    public void takeDamage(int amount)
     {
         currentHealth -= amount;
         healthSlider.value = currentHealth;

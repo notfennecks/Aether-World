@@ -23,16 +23,11 @@ public class Projectile : MonoBehaviour
         rb.velocity = transform.right * ProjectileSpeed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.name != "Player" && enemy == false)
+        if (collision.name.Contains("Pixie"))
         {
-            /*if (name == "Rock(Clone)")
-            {
-                GameObject effect = Instantiate(earthExplosion, transform.position, Quaternion.identity);
-                Destroy(effect, 1.2f);
-            }*/
-            //Destroy(gameObject);
+            collision.GetComponent<PixieHealthSystem>().TakeDamage(1);
         }
     }
 }
