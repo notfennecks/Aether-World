@@ -32,6 +32,16 @@ public class LevelSelection : MonoBehaviour
     public GameObject eldorisMap;
     public GameObject zephyrMap;
 
+    void Start()
+    {
+        worlds.SetActive(true);
+        overworldMap.SetActive(false);
+        terraMap.SetActive(false);
+        scoriaMap.SetActive(false);
+        eldorisMap.SetActive(false);
+        zephyrMap.SetActive(false);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) == true)
@@ -153,11 +163,76 @@ public class LevelSelection : MonoBehaviour
 
     public void overworld01()
     {
-        SceneManager.LoadScene("OverworldLevel01");
+        SceneManager.LoadScene("Overworld01");
+    }
+
+    public void overworld02()
+    {
+        SceneManager.LoadScene("Overworld02");
+    }
+
+    public void overworld03()
+    {
+        SceneManager.LoadScene("Overworld03");
     }
 
     public void terra01()
     {
-        SceneManager.LoadScene("TerraLevel01");
+        SceneManager.LoadScene("Terra01");
+    }
+
+    public void terra02()
+    {
+        SceneManager.LoadScene("Terra02");
+    }
+
+    public void terra03()
+    {
+        SceneManager.LoadScene("Terra03");
+    }
+
+    public void eldoris01()
+    {
+        SceneManager.LoadScene("Eldoris01");
+    }
+
+    public void eldoris02()
+    {
+        SceneManager.LoadScene("Eldoris02");
+    }
+
+    public void eldoris03()
+    {
+        SceneManager.LoadScene("Eldoris03");
+    }
+
+    public void scoria01()
+    {
+        SceneManager.LoadScene("Scoria01");
+    }
+
+    public void scoria02()
+    {
+        SceneManager.LoadScene("Scoria02");
+    }
+
+    public void scoria03()
+    {
+        SceneManager.LoadScene("Scoria03");
+    }
+
+    public void zephyr01()
+    {
+        SceneManager.LoadScene("Zephyr01");
+    }
+
+    public void zephyr02()
+    {
+        SceneManager.LoadScene("Zephyr02");
+    }
+
+    public void zephyr03()
+    {
+        SceneManager.LoadScene("Zephyr03");
     }
 }
