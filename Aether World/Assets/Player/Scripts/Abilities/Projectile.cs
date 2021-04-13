@@ -29,5 +29,13 @@ public class Projectile : MonoBehaviour
         {
             collision.GetComponent<PixieHealthSystem>().TakeDamage(1);
         }
+        if (collision.name.Contains("DeepOne"))
+        {
+            collision.GetComponent<DeepOneHealthSystem>().TakeDamage(1);
+        }
+        if (collision.name.Contains("BurningOrb"))
+        {
+            collision.GetComponent<BurningOrbHealthSystem>().TakeDamage(1);
+        }
     }
 }

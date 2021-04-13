@@ -68,6 +68,7 @@
     <Compile Include="Assets\Player\Scripts\PlayerHealthSystem.cs" />
     <Compile Include="Assets\Scripts\GoalPoint.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Enemies\DeepOne\Spit.cs" />
     <Compile Include="Assets\Scripts\SocialSpace.cs" />
     <Compile Include="Assets\Scripts\UI\LevelSelection.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerTopDownMovement.cs" />
@@ -75,7 +76,9 @@
     <Compile Include="Assets\Player\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Enemies\Pixie\PixieAI.cs" />
     <Compile Include="Assets\Enemies\DeepOne\DeepOneAI.cs" />
-    <Compile Include="Assets\Spit.cs" />
+    <Compile Include="Assets\Enemies\BurningOrb\BurningOrbAI.cs" />
+    <Compile Include="Assets\Enemies\DeepOne\DeepOneHealthSystem.cs" />
+    <Compile Include="Assets\Enemies\BurningOrb\BurningOrbHealthSystem.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
