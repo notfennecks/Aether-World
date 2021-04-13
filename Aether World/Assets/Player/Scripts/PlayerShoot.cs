@@ -54,9 +54,6 @@ public class PlayerShoot : MonoBehaviour
             TimeUntilShoot = Time.time + FireRate;
         }
 
-
-
-
         if (Input.GetMouseButtonDown(1))
         {
             chargeStartTime = Time.time;
@@ -90,11 +87,9 @@ public class PlayerShoot : MonoBehaviour
 
     void Shoot()
     {
-        //GameObject airProjectile;
 
         if (em.currentEssence == "AIR")
         {
-            //airProjectile = Instantiate(AirProjectile, FiringPoint.position, FiringPoint.rotation);
             StartCoroutine("AirBurst");
         }
 
