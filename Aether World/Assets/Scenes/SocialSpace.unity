@@ -123,6 +123,49 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &328760037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 328760039}
+  - component: {fileID: 328760038}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &328760038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328760037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9db95d25178565b4498e08f04cba15f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &328760039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328760037}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &534341992
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +176,8 @@ GameObject:
   m_Component:
   - component: {fileID: 534341993}
   - component: {fileID: 534341994}
+  - component: {fileID: 534341996}
+  - component: {fileID: 534341995}
   m_Layer: 0
   m_Name: Eldur
   m_TagString: Untagged
@@ -148,11 +193,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534341992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.53, y: 1.36, z: 0}
+  m_LocalPosition: {x: 15.97, y: 1.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &534341994
 SpriteRenderer:
@@ -205,6 +250,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &534341995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534341992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5fa70144305104d85a19de799a61b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 534341992}
+  dialogue:
+    name: Eldur
+    sentences:
+    - Hello there human, I see you managed to get a fire essence. I best teach you
+      how to use it so you can destroy those  water loving fools!
+    - The fire essence doesn't stand out in terms of mobility, it is better at fighting.
+      The attack is big, so if you find aim hard you can just get close.
+    - You can also do a short dash attack. Wait, you can't? Go and figure out how
+      to foolish human!
+--- !u!58 &534341996
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534341992}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &583899935
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,6 +298,8 @@ GameObject:
   m_Component:
   - component: {fileID: 583899936}
   - component: {fileID: 583899937}
+  - component: {fileID: 583899939}
+  - component: {fileID: 583899938}
   m_Layer: 0
   m_Name: Vatten
   m_TagString: Untagged
@@ -230,11 +315,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583899935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.85, y: 1.84, z: 0}
+  m_LocalPosition: {x: -9.74, y: 1.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &583899937
 SpriteRenderer:
@@ -287,6 +372,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &583899938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583899935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5fa70144305104d85a19de799a61b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 583899935}
+  dialogue:
+    name: Vatten
+    sentences:
+    - Oh a human, I see you somehow got a water essence. Could be a wrose being to
+      have one, so I guess I will teach you how it works.
+    - This essence is good at moving side to side, not up and down. You can stay
+      in the air for a while and use a sheild to protect yourself at the cost of
+      movement.
+    - Don't expect the attack to do alot of damage, fool. The attack is good for
+      slowing enemies down, not destroying them!
+--- !u!58 &583899939
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583899935}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1619525003
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +421,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1619525005}
   - component: {fileID: 1619525004}
+  - component: {fileID: 1619525006}
+  - component: {fileID: 1619525007}
   m_Layer: 0
   m_Name: Demantur
   m_TagString: Untagged
@@ -367,8 +493,48 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1619525006
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619525003}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &1619525007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619525003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5fa70144305104d85a19de799a61b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 1619525003}
+  dialogue:
+    name: Demantur
+    sentences:
+    - Hello there traveler! You seem confused, I should probably teach you a few
+      things.(click to continue)
+    - That thing you just did lets you advance texts like this. It also allows you
+      to shoot projectiles in actual areas.
+    - The arrow keys or WASD can be used to move here, but out there that spacebar
+      thingy is what you use to jump.
+    - If you use the number keys (1,2,3,4,0) you can switch between these "essence"
+      things. Each one is good at something, so go try them out!
 --- !u!1 &1712466165
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,7 +576,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1883315073
 GameObject:
@@ -422,6 +588,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1883315074}
   - component: {fileID: 1883315075}
+  - component: {fileID: 1883315077}
+  - component: {fileID: 1883315076}
   m_Layer: 0
   m_Name: Jorden
   m_TagString: Untagged
@@ -437,11 +605,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1883315073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.65, y: -4.68, z: 0}
+  m_LocalPosition: {x: 3.77, y: -9.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1883315075
 SpriteRenderer:
@@ -494,6 +662,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1883315076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883315073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5fa70144305104d85a19de799a61b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 1883315073}
+  dialogue:
+    name: Jorden
+    sentences:
+    - Dumb human ask question!? Earth Essence move slow. Hold right click. Shoot
+      big rock.
+    - GO AWAY.
+--- !u!58 &1883315077
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883315073}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &1974161654
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +707,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1974161655}
   - component: {fileID: 1974161656}
+  - component: {fileID: 1974161658}
+  - component: {fileID: 1974161657}
   m_Layer: 0
   m_Name: Loft
   m_TagString: Untagged
@@ -519,11 +724,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974161654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.77, y: 7.19, z: 0}
+  m_LocalPosition: {x: 4.01, y: 12.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1974161656
 SpriteRenderer:
@@ -576,6 +781,44 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1974161657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974161654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f5fa70144305104d85a19de799a61b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 1974161654}
+  dialogue:
+    name: Loft
+    sentences:
+    - Hi there traveler! I see you can use the air essence! Let me tell you all about
+      it!
+    - The air essence is super duper mobile in the air! Letting you jump a bunch
+      of times(currently 3) and do a super big jump(right click)!
+    - The attack shoots a barrage of 3 wind blasts at enemies! This essence can be
+      great for getting around!
+--- !u!58 &1974161658
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974161654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1001 &4495438792410821984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -589,7 +832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4495438794116852626, guid: a27b0b22e372e984d8e54b6e6008b744, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4495438794116852626, guid: a27b0b22e372e984d8e54b6e6008b744, type: 3}
       propertyPath: m_LocalScale.x

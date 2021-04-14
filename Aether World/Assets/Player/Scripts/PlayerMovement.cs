@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
+    [SerializeField] private float SlopeCheckDistance;
+
     [SerializeField] private LayerMask groundLayerMask;
     private BoxCollider2D playerHitbox;
 
@@ -77,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         IsGrounded();
+        SlopeCheck();
     }
 
     private void FixedUpdate()
@@ -141,9 +144,19 @@ public class PlayerMovement : MonoBehaviour
         {
             rayColor = Color.red;
         }
-        //Debug.DrawRay(playerHitbox.bounds.center + new Vector3(playerHitbox.bounds.extents.x, -playerHitbox.bounds.extents.y), Vector2.down * extraHeight, rayColor);
-        //Debug.DrawRay(playerHitbox.bounds.center + new Vector3(-playerHitbox.bounds.extents.x, -playerHitbox.bounds.extents.y), Vector2.down * extraHeight, rayColor);
-        //Debug.DrawRay(playerHitbox.bounds.center + new Vector3(playerHitbox.bounds.extents.x, -playerHitbox.bounds.extents.y - extraHeight), Vector2.left * playerHitbox.bounds.extents.x * 2, rayColor);
+        Debug.DrawRay(playerHitbox.bounds.center + new Vector3(playerHitbox.bounds.extents.x, -playerHitbox.bounds.extents.y), Vector2.down * extraHeight, rayColor);
+        Debug.DrawRay(playerHitbox.bounds.center + new Vector3(-playerHitbox.bounds.extents.x, -playerHitbox.bounds.extents.y), Vector2.down * extraHeight, rayColor);
+        Debug.DrawRay(playerHitbox.bounds.center + new Vector3(playerHitbox.bounds.extents.x, -playerHitbox.bounds.extents.y - extraHeight), Vector2.left * playerHitbox.bounds.extents.x * 2, rayColor);
         return raycastHit.collider != null;
+    }
+    public void SlopeCheck()
+    {
+        float extraHeight = 0.2f;
+        //Vector2 checkPosition = transform.position - new Vector3(0.0f, playerHitbox.bounds.size.y / 2);
+        RaycastHit2D Hit = Physics2D.BoxCast(playerHitbox.bounds.center, playerHitbox.bounds.size, 0f, Vector2.down, extraHeight, groundLayerMask);
+        if (Hit)
+        {
+            Debug.DrawRay(Hit.point, Hit.normal);
+        }
     }
 }
