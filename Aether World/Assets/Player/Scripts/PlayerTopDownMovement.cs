@@ -16,6 +16,14 @@ public class PlayerTopDownMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");  //If moving right = 1 | if moving left = -1
         movement.y = Input.GetAxisRaw("Vertical"); //If moving up = 1 | if moving down = -1
         movement.Normalize();  //So you dont move faster when moving diagonally
+        if (movement.x > 0)
+        {
+            this.transform.localScale = new Vector3(1, 1, 1);
+        }
+        if (movement.x < 0)
+        {
+            this.transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
     void FixedUpdate()
