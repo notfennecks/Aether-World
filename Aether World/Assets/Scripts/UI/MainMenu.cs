@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
     {
         //We would either want this to go to social space or level selection
         //I recommend social space so you talk to npc before loading a level
-        SceneManager.LoadScene("LevelSelection");
+        SceneManager.LoadScene("Level00");
     }
     private void Update()
     {

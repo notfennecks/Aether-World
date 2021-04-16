@@ -78,10 +78,10 @@
     <Compile Include="Assets\Player\Scripts\PlayerTopDownMovement.cs" />
     <Compile Include="Assets\Enemies\BurningOrb\BurningOrbHealthSystem.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
-    <Compile Include="Assets\Player\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Enemies\Pixie\PixieAI.cs" />
     <Compile Include="Assets\Enemies\DeepOne\DeepOneAI.cs" />
+    <Compile Include="Assets\Player\Scripts\PauseMenu.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
