@@ -679,6 +679,30 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &1384384115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6561534457557815256, guid: e833fe2e0cc69f24fa6dae7c2f4b0304, type: 3}
+  m_PrefabInstance: {fileID: 6561534458526654205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1384384121
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384384115}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09291dd54e46b574996612c83b34fab0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1610038835
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,5 +802,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: BurningOrb
       objectReference: {fileID: 0}
+    - target: {fileID: 6561534457557815258, guid: e833fe2e0cc69f24fa6dae7c2f4b0304, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3702014402948857021, guid: 0e8d993a5c353d84b8f0990af3cff05a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e833fe2e0cc69f24fa6dae7c2f4b0304, type: 3}

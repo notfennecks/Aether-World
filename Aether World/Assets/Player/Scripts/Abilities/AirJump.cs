@@ -20,7 +20,7 @@ public class AirJump : MonoBehaviour
 
     void Update()
     {
-        if (em.currentEssence == "AIR" && Input.GetMouseButtonDown(1))
+        if (em.currentEssence == "AIR" && Input.GetKeyDown(KeyCode.Q))
         {
             if (CanUse == true)
             {

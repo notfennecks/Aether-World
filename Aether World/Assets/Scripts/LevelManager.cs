@@ -7,16 +7,19 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
     public Transform RespwanPoint;
-    public GameObject PlayerPrefab;
+    private GameObject player;
     public GameObject GoalPoint;
 
     private void Awake()
     {
         instance = this;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
+
     public void Respawn()
     {
-        Instantiate(PlayerPrefab, RespwanPoint.position, Quaternion.identity);
+        //Instantiate(player, RespwanPoint.position, Quaternion.identity);
+        SceneManager.LoadScene("LevelSelection");
     }
 
     public void Victory()

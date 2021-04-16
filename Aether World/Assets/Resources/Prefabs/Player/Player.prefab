@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372609113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.79999983, z: -10}
+  m_LocalPosition: {x: 0, y: -0.7999998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1499785318}
@@ -1001,12 +1001,13 @@ GameObject:
   - component: {fileID: 2023109948759332561}
   - component: {fileID: 2023109948759332574}
   - component: {fileID: 2023109948759332563}
+  - component: {fileID: 2402124469132535694}
   - component: {fileID: 2023109948759332560}
   - component: {fileID: 4845483178440164586}
   - component: {fileID: 2023109948759332562}
+  - component: {fileID: -3883050234094483721}
   - component: {fileID: 2023109948759332565}
   - component: {fileID: 7686689109164606855}
-  - component: {fileID: -3883050234094483721}
   - component: {fileID: 2763835431524754283}
   - component: {fileID: 1070773900}
   m_Layer: 0
@@ -1095,7 +1096,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: d0898b0fcb33008419559273791b2a8f, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.12941837, y: -0.008092374}
@@ -1111,6 +1112,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7315693, y: 1.9788713}
   m_EdgeRadius: 0
+--- !u!70 &2402124469132535694
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023109948759332575}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12734866, y: 0}
+  m_Size: {x: 1.6623769, y: 2}
+  m_Direction: 0
 --- !u!50 &2023109948759332560
 Rigidbody2D:
   serializedVersion: 4
@@ -1176,6 +1193,34 @@ MonoBehaviour:
     m_Bits: 64
   jumpMax: 1
   jumpCount: 0
+--- !u!114 &-3883050234094483721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023109948759332575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71f0036a9f9d2424f94a0ad0c1e7c586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentEssence: 
+  basicMoveSpeed: 12
+  basicJumpForce: 15
+  basicMaxJumps: 2
+  airMoveSpeed: 18
+  airJumpForce: 15
+  airMaxJumps: 3
+  earthMoveSpeed: 10
+  earthJumpForce: 8
+  earthMaxJumps: 1
+  waterMoveSpeed: 15
+  waterJumpForce: 10
+  waterMaxJumps: 5
+  fireMoveSpeed: 14
+  fireJumpForce: 14
+  fireMaxJumps: 2
 --- !u!114 &2023109948759332565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,34 +1268,6 @@ MonoBehaviour:
   aetherEffectSpeed: 0.03
   aetherRegenRate: 0.02
   isDying: 0
---- !u!114 &-3883050234094483721
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023109948759332575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71f0036a9f9d2424f94a0ad0c1e7c586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentEssence: 
-  basicMoveSpeed: 12
-  basicJumpForce: 15
-  basicMaxJumps: 2
-  airMoveSpeed: 18
-  airJumpForce: 15
-  airMaxJumps: 3
-  earthMoveSpeed: 10
-  earthJumpForce: 8
-  earthMaxJumps: 1
-  waterMoveSpeed: 15
-  waterJumpForce: 10
-  waterMaxJumps: 5
-  fireMoveSpeed: 14
-  fireJumpForce: 14
-  fireMaxJumps: 2
 --- !u!114 &2763835431524754283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,7 +1382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023109949796872261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.79999983, z: -10}
+  m_LocalPosition: {x: 0, y: -0.7999998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2023109948759332561}

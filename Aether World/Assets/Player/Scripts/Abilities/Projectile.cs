@@ -37,5 +37,9 @@ public class Projectile : MonoBehaviour
         {
             collision.GetComponent<BurningOrbHealthSystem>().TakeDamage(1);
         }
+        if (collision.name.Contains("Ajiva"))
+        {
+            collision.GetComponent<AjivaHealthSystem>().TakeDamage(1);
+        }
     }
 }

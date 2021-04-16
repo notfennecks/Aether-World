@@ -21,6 +21,9 @@ public class PlayerHealthSystem : MonoBehaviour
     [HideInInspector] public bool isDying;
     private PlayerMovement pm;
 
+    private AquaAegis aAegis;
+    public LevelManager levelManager;
+
     void Start()
     {
         pm = GetComponent<PlayerMovement>();
@@ -31,6 +34,8 @@ public class PlayerHealthSystem : MonoBehaviour
         currentAether = maxAether;
         aetherSlider.maxValue = maxAether;
         aetherSlider.value = maxAether;
+
+        aAegis = GetComponent<AquaAegis>();
     }
 
     private void Update()
@@ -94,7 +99,20 @@ public class PlayerHealthSystem : MonoBehaviour
 
     public void takeDamage(int amount)
     {
-        currentHealth -= amount;
-        healthSlider.value = currentHealth;
+        if (aAegis.isActive == false)
+        {
+            currentHealth -= amount;
+            healthSlider.value = currentHealth;
+            if (currentHealth <= 0)
+            {
+                levelManager.Respawn();
+                //Destroy(this.gameObject);
+            }
+        }
+        else
+        {
+            return;
+        }
+        
     }
 }

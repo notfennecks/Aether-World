@@ -11,14 +11,24 @@ public class BurningOrbAI : MonoBehaviour
     public float tickRate;
     private float nextTickTime;
     private Transform player;
+    private SpriteRenderer sprite;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        if (this.transform.position.x > player.position.x)
+        {
+            sprite.flipX = false;
+        }
+        else if (this.transform.position.x < player.position.x)
+        {
+            sprite.flipX = true;
+        }
         float distFromPlayer = Vector2.Distance(player.position, transform.position);
         if (distFromPlayer < detectRadius && distFromPlayer > stopRadius)
         {

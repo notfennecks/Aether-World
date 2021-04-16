@@ -71,6 +71,7 @@
     <Compile Include="Assets\Enemies\DeepOne\Spit.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Enemies\BurningOrb\BurningOrbAI.cs" />
+    <Compile Include="Assets\Player\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\SocialSpace.cs" />
     <Compile Include="Assets\Scripts\UI\LevelSelection.cs" />
     <Compile Include="Assets\Enemies\DeepOne\DeepOneHealthSystem.cs" />
@@ -81,7 +82,9 @@
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Enemies\Pixie\PixieAI.cs" />
     <Compile Include="Assets\Enemies\DeepOne\DeepOneAI.cs" />
-    <Compile Include="Assets\Player\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Enemies\Ajiva\AjivaAI.cs" />
+    <Compile Include="Assets\Enemies\Ajiva\RockProjectile.cs" />
+    <Compile Include="Assets\Enemies\Ajiva\AjivaHealthSystem.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

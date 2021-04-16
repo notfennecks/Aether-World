@@ -7,7 +7,8 @@ public class AquaAegis : MonoBehaviour
     private GameObject player;
     private EssenceManager em;
     private PlayerMovement pm;
-    private GameObject aquaAegis;
+    [HideInInspector] public GameObject aquaAegis;
+    [HideInInspector] public bool isActive;
     private float baseWaterMoveSpeed;
     [Range(0f, 1.0f)]
     public float aegisMoveMulti;
@@ -19,6 +20,7 @@ public class AquaAegis : MonoBehaviour
         pm = player.GetComponent<PlayerMovement>();
         aquaAegis = Resources.Load("Prefabs/Player/Abilities/AquaAegis") as GameObject;  //If using Resources.load object must be in "Resources" folder
         aquaAegis = Instantiate(aquaAegis, player.transform.position, Quaternion.identity);
+        aquaAegis.transform.parent = player.transform;
         aquaAegis.SetActive(false);
         baseWaterMoveSpeed = em.waterMoveSpeed;
     }
@@ -26,18 +28,21 @@ public class AquaAegis : MonoBehaviour
     void Update()
     {
         aquaAegis.transform.position = player.transform.position;
-        if (em.currentEssence == "WATER" && Input.GetMouseButtonDown(1))
+        if (em.currentEssence == "WATER" && Input.GetKeyDown(KeyCode.Q))
         {
+            isActive = true;
             aquaAegis.SetActive(true);
             pm.movementSpeed *= aegisMoveMulti;
         }
         else if (em.currentEssence != "WATER")
         {
+            isActive = false;
             aquaAegis.SetActive(false);
             pm.movementSpeed = baseWaterMoveSpeed;
         }
         else if (Input.GetMouseButtonUp(1))
         {
+            isActive = false;
             aquaAegis.SetActive(false);
             pm.movementSpeed = baseWaterMoveSpeed;
         }

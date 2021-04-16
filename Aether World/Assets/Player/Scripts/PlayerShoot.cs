@@ -63,7 +63,7 @@ public class PlayerShoot : MonoBehaviour
             earthChargedState = true;
             float chargeTime = Time.time - chargeStartTime;
         }
-        if (Input.GetMouseButtonUp(1) && TimeUntilShoot < Time.time && em.currentEssence == "EARTH")
+        if (Input.GetMouseButtonUp(0) && TimeUntilShoot < Time.time && em.currentEssence == "EARTH")
         {
             float chargeTime = Time.time - chargeStartTime;
             if (chargeTime < 0.5)
