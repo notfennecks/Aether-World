@@ -28,18 +28,22 @@ public class Projectile : MonoBehaviour
         if (collision.name.Contains("Pixie"))
         {
             collision.GetComponent<PixieHealthSystem>().TakeDamage(1);
+            Destroy(this.gameObject);
         }
         if (collision.name.Contains("DeepOne"))
         {
             collision.GetComponent<DeepOneHealthSystem>().TakeDamage(1);
+            Destroy(this.gameObject);
         }
         if (collision.name.Contains("BurningOrb"))
         {
             collision.GetComponent<BurningOrbHealthSystem>().TakeDamage(1);
+            Destroy(this.gameObject);
         }
         if (collision.name.Contains("Ajiva"))
         {
             collision.GetComponent<AjivaHealthSystem>().TakeDamage(1);
+            Destroy(this.gameObject);
         }
     }
 }

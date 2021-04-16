@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PlayerHealthSystem : MonoBehaviour
     public Slider aetherEffectSlider;
     [SerializeField] private float aetherEffectSpeed;
     public float aetherRegenRate;
+    public float healthRegenRate;
     [HideInInspector] public bool isDying;
     private PlayerMovement pm;
 
@@ -27,6 +29,7 @@ public class PlayerHealthSystem : MonoBehaviour
     void Start()
     {
         pm = GetComponent<PlayerMovement>();
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         currentHealth = maxHealth;
         healthSlider.maxValue = maxHealth;
         healthSlider.value = maxHealth;
@@ -82,6 +85,10 @@ public class PlayerHealthSystem : MonoBehaviour
         {
             regenAether();
         }
+        if(healthSlider.value < maxHealth)
+        {
+            //regenHealth();
+        }
 
     }
 
@@ -89,6 +96,13 @@ public class PlayerHealthSystem : MonoBehaviour
     {
         currentAether -= amount;
         aetherSlider.value = currentAether;
+    }
+
+    public void regenHealth()
+    {
+        healthSlider.value += healthRegenRate;
+        currentHealth = (int)healthSlider.value;
+        Debug.Log("why");
     }
 
     public void regenAether()
@@ -105,8 +119,9 @@ public class PlayerHealthSystem : MonoBehaviour
             healthSlider.value = currentHealth;
             if (currentHealth <= 0)
             {
-                levelManager.Respawn();
+                //levelManager.Respawn();
                 //Destroy(this.gameObject);
+                SceneManager.LoadScene("TitleScreen");
             }
         }
         else
