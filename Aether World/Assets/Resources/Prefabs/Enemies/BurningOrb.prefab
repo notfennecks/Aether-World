@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6561534457557815259}
   - component: {fileID: 6561534457557815252}
   - component: {fileID: 6561534457557815255}
+  - component: {fileID: 1384384121}
   m_Layer: 0
   m_Name: BurningOrb
   m_TagString: Untagged
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: 168a51d7580d26245b3de340cd4382df, type: 3}
+  m_Sprite: {fileID: 3702014402948857021, guid: 0e8d993a5c353d84b8f0990af3cff05a, type: 3}
   m_Color: {r: 1, g: 0.10849059, b: 0.10849059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,3 +131,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!95 &1384384121
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6561534457557815256}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09291dd54e46b574996612c83b34fab0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

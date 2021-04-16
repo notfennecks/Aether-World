@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 9}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -71,10 +71,10 @@ MonoBehaviour:
     y: 0
     width: 376
     height: 947
-  m_MinSize: {x: 231, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 231, y: 471}
+  m_MaxSize: {x: 10001, y: 14021}
   vertical: 1
-  controlID: 39
+  controlID: 59
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 596
     width: 1123
     height: 351
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 21}
@@ -123,10 +123,10 @@ MonoBehaviour:
     y: 0
     width: 1123
     height: 947
-  m_MinSize: {x: 202, y: 342}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 202, y: 321}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 114
+  controlID: 137
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,10 +149,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 709, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 708, y: 471}
+  m_MaxSize: {x: 18003, y: 14021}
   vertical: 0
-  controlID: 38
+  controlID: 58
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,8 +172,8 @@ MonoBehaviour:
     y: 0
     width: 421
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -198,8 +198,8 @@ MonoBehaviour:
     y: 0
     width: 376
     height: 438
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -328,14 +328,14 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 376
-    y: 669
+    x: 1
+    y: 615
     width: 1121
     height: 330
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 35904
+  m_LastSelectedObjectID: -4464
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -630,23 +630,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Player/Scripts/Abilities
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 51
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Player/Scripts/Abilities
   m_LastFoldersGridSize: 51
   m_LastProjectPath: D:\PolySpring21\COM419\Aether World Files\Repository\Aether-World\Aether
     World
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 240}
-    m_SelectedIDs: ce460000
-    m_LastClickedID: 18126
-    m_ExpandedIDs: 00000000b8460000ba460000bc460000be460000c0460000c2460000c4460000c6460000c8460000ca460000cc460000ce460000d0460000d2460000d4460000d6460000d846000000ca9a3b
+    scrollPos: {x: 0, y: 256}
+    m_SelectedIDs: 5c470000
+    m_LastClickedID: 18268
+    m_ExpandedIDs: 00000000224700002447000026470000284700002a4700002c4700002e47000030470000324700003447000036470000384700003a4700003c4700003e470000404700004247000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -674,7 +674,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b8460000ba460000bc460000be460000c0460000c2460000c4460000c6460000c8460000ca460000cc460000ce460000d0460000d2460000d4460000d6460000d8460000
+    m_ExpandedIDs: 00000000224700002447000026470000284700002a4700002c4700002e47000030470000324700003447000036470000384700003a4700003c4700003e4700004047000042470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -750,8 +750,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1499
-    y: 73
+    x: 1500
+    y: 19
     width: 420
     height: 926
   m_ViewDataDictionary: {fileID: 0}
@@ -762,7 +762,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 1799
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
@@ -795,23 +795,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 408c0000
-      m_LastClickedID: 35904
-      m_ExpandedIDs: 149cffff78bcffff72beffff74beffff40fbffffe0420000227b0000e68b0000
+      m_SelectedIDs: 90eeffff
+      m_LastClickedID: -4464
+      m_ExpandedIDs: aeeeffffdaf0ffff58f2ffffdaf3ffff7efaffff40fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: SPACE
-        m_OriginalName: SPACE
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -18974
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -841,8 +841,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 376
-    y: 73
+    x: 1
+    y: 19
     width: 1121
     height: 575
   m_ViewDataDictionary: {fileID: 0}
@@ -857,9 +857,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 438.25665, y: 318.36148, z: -303.30493}
+    m_Target: {x: 286.95407, y: 15.320528, z: -349.14532}
     speed: 2
-    m_Value: {x: 428.91922, y: 315.48126, z: -302.2792}
+    m_Value: {x: 286.79913, y: 14.39083, z: -348.96527}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -910,9 +910,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 272.10175
+    m_Target: 47.767975
     speed: 2
-    m_Value: 284.9233
+    m_Value: 50.01882
   m_Ortho:
     m_Target: 1
     speed: 2

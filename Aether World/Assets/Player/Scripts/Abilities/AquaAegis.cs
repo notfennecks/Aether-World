@@ -40,7 +40,7 @@ public class AquaAegis : MonoBehaviour
             aquaAegis.SetActive(false);
             pm.movementSpeed = baseWaterMoveSpeed;
         }
-        else if (Input.GetMouseButtonUp(1))
+        else if (Input.GetKeyUp(KeyCode.Q))
         {
             isActive = false;
             aquaAegis.SetActive(false);

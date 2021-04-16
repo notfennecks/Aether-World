@@ -42,7 +42,7 @@ public class PlayerHealthSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            takeDamage(20);
+            gainHealth(20);
         }
 
         if (Input.GetKeyDown(KeyCode.G))
@@ -114,5 +114,11 @@ public class PlayerHealthSystem : MonoBehaviour
             return;
         }
         
+    }
+
+    public void gainHealth(int amount)
+    {
+        currentHealth += amount;
+        healthSlider.value = currentHealth;
     }
 }
