@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectileSpeed: 12
   ProjectileDamage: 2
+  projectile: {fileID: 3120400438186215789}
   TimeToLive: 2
   rb: {fileID: 2274912827385660246}
   earthExplosion: {fileID: 7932474064295298631, guid: 87c3a3166edf5964bb8df01863c458cd, type: 3}

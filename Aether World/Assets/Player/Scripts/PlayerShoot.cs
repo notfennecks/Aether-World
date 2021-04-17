@@ -54,7 +54,7 @@ public class PlayerShoot : MonoBehaviour
             TimeUntilShoot = Time.time + FireRate;
         }
 
-        if (Input.GetMouseButtonDown(1))
+        /*if (Input.GetMouseButtonDown(1))
         {
             chargeStartTime = Time.time;
         }
@@ -73,7 +73,7 @@ public class PlayerShoot : MonoBehaviour
             chargeTime = 0.5f;
             TimeUntilShoot = Time.time + FireRate;
             earthChargedState = false;
-        }
+        }*/
 
         mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
     }
@@ -96,7 +96,7 @@ public class PlayerShoot : MonoBehaviour
         else if (em.currentEssence == "EARTH")
         {
             GameObject earthProjectile = Instantiate(EarthProjectile, FiringPoint.position, FiringPoint.rotation);
-            earthProjectile.transform.localScale = earthPScale;
+            //earthProjectile.transform.localScale = earthPScale;
         }
         else if (em.currentEssence == "BASIC")
         {
