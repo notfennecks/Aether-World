@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public int jumpMax = 0;
     public int jumpCount = 0;
 
-    private bool IsFacingRight = true;
+    public bool IsFacingRight = true;
 
     float movex;
 
