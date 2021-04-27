@@ -10,7 +10,7 @@ public class PlayerHealthSystem : MonoBehaviour
     public int maxHealth;
     private int currentHealth;
     public int maxAether;
-    public int currentAether;
+    private int currentAether;
     private GameObject player;
     public Slider healthSlider;
     public Slider healthEffectSlider;

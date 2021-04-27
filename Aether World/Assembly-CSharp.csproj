@@ -56,7 +56,6 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Player\Scripts\Abilities\FireDash.cs" />
     <Compile Include="Assets\Enemies\Pixie\WindGust.cs" />
     <Compile Include="Assets\Player\Scripts\Abilities\Projectile.cs" />
     <Compile Include="Assets\Enemies\Pixie\PixieHealthSystem.cs" />
@@ -74,10 +73,8 @@
     <Compile Include="Assets\Enemies\DeepOne\Spit.cs" />
     <Compile Include="Assets\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\Enemies\BurningOrb\BurningOrbAI.cs" />
-    <Compile Include="Assets\Player\Scripts\Abilities\FireAura.cs" />
     <Compile Include="Assets\Player\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\SocialSpace.cs" />
-    <Compile Include="Assets\Scripts\HealthPickUp.cs" />
     <Compile Include="Assets\Scripts\UI\LevelSelection.cs" />
     <Compile Include="Assets\Worlds\ChangeMap.cs" />
     <Compile Include="Assets\Enemies\DeepOne\DeepOneHealthSystem.cs" />
@@ -333,6 +330,9 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>D:\Unity\UnityVersions\2020.2.5f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\Unity\UnityVersions\2020.2.5f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -772,6 +772,10 @@
       <Project>{F9987A1B-39B7-E6FE-36D5-2D29C9B057D2}</Project>
       <Name>Unity.2D.Tilemap.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{A71501CB-665B-7E8B-11A7-7CFF2FA531D9}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
       <Project>{05731749-7195-51F2-8FFA-3F649C992B86}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
@@ -783,6 +787,14 @@
     <ProjectReference Include="UnityEngine.UI.csproj">
       <Project>{C273487C-9B57-56A8-5562-8BA97DA501E2}</Project>
       <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{57AAF41A-5652-1415-7AD9-2F3B9A48B11F}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{C24BE6FD-6B9B-EB02-D9B8-BC510C8478A5}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
