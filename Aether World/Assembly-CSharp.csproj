@@ -76,6 +76,7 @@
     <Compile Include="Assets\Player\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\SocialSpace.cs" />
     <Compile Include="Assets\Scripts\UI\LevelSelection.cs" />
+    <Compile Include="Assets\Worlds\ChangeMap.cs" />
     <Compile Include="Assets\Enemies\DeepOne\DeepOneHealthSystem.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Player\Scripts\PlayerTopDownMovement.cs" />

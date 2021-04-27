@@ -11,6 +11,7 @@ public class LevelSelection : MonoBehaviour
     public Animator scoriaAnimator;
     public Animator eldorisAnimator;
     public Animator zephyrAnimator;
+    public Animator cameraAnimator;
 
     [Header("Audio Source Variables")]
     public AudioSource overworldSelect;
@@ -24,51 +25,8 @@ public class LevelSelection : MonoBehaviour
     public AudioSource zephyrSelect;
     public AudioSource zephyrHover;
 
-    [Header("UI Panels")]
-    public GameObject worlds;
-    public GameObject overworldMap;
-    public GameObject terraMap;
-    public GameObject scoriaMap;
-    public GameObject eldorisMap;
-    public GameObject zephyrMap;
-
-    void Start()
-    {
-        worlds.SetActive(true);
-        overworldMap.SetActive(false);
-        terraMap.SetActive(false);
-        scoriaMap.SetActive(false);
-        eldorisMap.SetActive(false);
-        zephyrMap.SetActive(false);
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape) == true)
-        {
-            worlds.SetActive(true);
-            if (overworldMap.activeSelf == true)
-            {
-                overworldMap.SetActive(false);
-            }
-            else if (terraMap.activeSelf == true)
-            {
-                terraMap.SetActive(false);
-            }
-            else if (scoriaMap.activeSelf == true)
-            {
-                scoriaMap.SetActive(false);
-            }
-            else if (eldorisMap.activeSelf == true)
-            {
-                eldorisMap.SetActive(false);
-            }
-            else if (zephyrMap.activeSelf == true)
-            {
-                zephyrMap.SetActive(false);
-            }
-        }
-    }
+    [HideInInspector]
+    public bool canHover = true;
 
     public void SelectSocialSpace()
     {
@@ -78,87 +36,131 @@ public class LevelSelection : MonoBehaviour
     public void SelectOverworld()
     {
         //Debug.Log("Selected Overworld!");
+        canHover = false;
         if (overworldSelect.isPlaying != true)
             overworldSelect.Play();
+        cameraAnimator.SetBool("OverworldSelected", true);
     }
 
     public void HoverOverworld()
     {
-        overworldAnimator.Play("OverworldGrow");
-        overworldHover.Play();
+        if (canHover)
+        {
+            overworldAnimator.Play("OverworldGrow");
+            overworldHover.Play();
+        }
     }
 
     public void ExitHoverOverworld()
     {
-        overworldAnimator.Play("OverworldShrink");
+        if (canHover)
+        {
+            overworldAnimator.Play("OverworldShrink");
+        }
     }
 
     public void SelectTerra()
     {
         //Debug.Log("Selected Terra!");
-        terraSelect.Play();
+        canHover = false;
+        if (terraSelect.isPlaying != true)
+            terraSelect.Play();
+        cameraAnimator.SetBool("TerraSelected", true);
     }
 
     public void HoverTerra()
     {
-        terraAnimator.Play("TerraGrow");
-        terraHover.Play();
+        if (canHover)
+        {
+            terraAnimator.Play("TerraGrow");
+            terraHover.Play();
+        }
     }
 
     public void ExitHoverTerra()
     {
-        terraAnimator.Play("TerraShrink");
+        if (canHover)
+        {
+            terraAnimator.Play("TerraShrink");
+        }
     }
 
     public void SelectScoria()
     {
         //Debug.Log("Selected Scoria!");
-        scoriaSelect.Play();
+        canHover = false;
+        if (scoriaSelect.isPlaying != true)
+            scoriaSelect.Play();
+        cameraAnimator.SetBool("ScoriaSelected", true);
     }
 
     public void HoverScoria()
     {
-        scoriaAnimator.Play("ScoriaGrow");
-        scoriaHover.Play();
+        if (canHover)
+        {
+            scoriaAnimator.Play("ScoriaGrow");
+            scoriaHover.Play();
+        }
     }
 
     public void ExitHoverScoria()
     {
-        scoriaAnimator.Play("ScoriaShrink");
+        if (canHover)
+        {
+            scoriaAnimator.Play("ScoriaShrink");
+        }
     }
 
     public void SelectEldoris()
     {
         //Debug.Log("Selected Eldoris!");
-        eldorisSelect.Play();
+        canHover = false;
+        if (eldorisSelect.isPlaying != true)
+            eldorisSelect.Play();
+        cameraAnimator.SetBool("EldorisSelected", true);
     }
 
     public void HoverEldoris()
     {
-        eldorisAnimator.Play("EldorisGrow");
-        eldorisHover.Play();
+        if (canHover)
+        {
+            eldorisAnimator.Play("EldorisGrow");
+            eldorisHover.Play();
+        }
     }
 
     public void ExitHoverEldoris()
     {
-        eldorisAnimator.Play("EldorisShrink");
+        if (canHover)
+        {
+            eldorisAnimator.Play("EldorisShrink");
+        }
     }
 
     public void SelectZephyr()
     {
         //Debug.Log("Selected Zephyr!");
-        zephyrSelect.Play();
+        canHover = false;
+        if (zephyrSelect.isPlaying != true)
+            zephyrSelect.Play();
+        cameraAnimator.SetBool("ZephyrSelected", true);
     }
 
     public void HoverZephyr()
     {
-        zephyrAnimator.Play("ZephyrGrow");
-        zephyrHover.Play();
+        if (canHover)
+        {
+            zephyrAnimator.Play("ZephyrGrow");
+            zephyrHover.Play();
+        }
     }
 
     public void ExitHoverZephyr()
     {
-        zephyrAnimator.Play("ZephyrShrink");
+        if (canHover)
+        {
+            zephyrAnimator.Play("ZephyrShrink");
+        }
     }
 
     public void overworld01()
