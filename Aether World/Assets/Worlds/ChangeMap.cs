@@ -92,6 +92,7 @@ public class ChangeMap : MonoBehaviour
 
     public void OverworldChange()
     {
+        cameraAnim.Play("ZoomFadeOut");
         level.canHover = true;
         overworldMap.SetActive(true);
         worlds.SetActive(false);
@@ -99,6 +100,7 @@ public class ChangeMap : MonoBehaviour
     }
     public void TerraChange()
     {
+        cameraAnim.Play("ZoomFadeOut");
         level.canHover = true;
         terraMap.SetActive(true);
         worlds.SetActive(false);
@@ -107,6 +109,7 @@ public class ChangeMap : MonoBehaviour
 
     public void ScoriaChange()
     {
+        cameraAnim.Play("ZoomFadeOut");
         level.canHover = true;
         scoriaMap.SetActive(true);
         worlds.SetActive(false);
@@ -114,6 +117,7 @@ public class ChangeMap : MonoBehaviour
     }
     public void EldorisChange()
     {
+        cameraAnim.Play("ZoomFadeOut");
         level.canHover = true;
         eldorisMap.SetActive(true);
         worlds.SetActive(false);
@@ -121,6 +125,7 @@ public class ChangeMap : MonoBehaviour
     }
     public void ZephyrChange()
     {
+        cameraAnim.Play("ZoomFadeOut");
         level.canHover = true;
         zephyrMap.SetActive(true);
         worlds.SetActive(false);

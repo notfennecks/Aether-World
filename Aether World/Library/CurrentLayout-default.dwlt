@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 25449
+  controlID: 14455
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 25601
+  controlID: 14429
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 25450
+  controlID: 14456
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -427,7 +427,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 16faffffd2450000424700007c470000
+      m_ExpandedIDs: ecfaffffa8430000d6440000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -489,13 +489,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Worlds/Eldoris
+    - Assets/Worlds
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 51
   m_LastFolders:
-  - Assets/Worlds/Eldoris
+  - Assets/Worlds
   m_LastFoldersGridSize: 51
   m_LastProjectPath: D:\PolySpring21\COM419\Aether World Files\Repository\Aether-World\Aether
     World
@@ -503,9 +503,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 256}
-    m_SelectedIDs: 984a0000
-    m_LastClickedID: 19096
-    m_ExpandedIDs: 00000000444a0000464a0000484a00004a4a00004c4a00004e4a0000504a0000524a0000544a0000564a0000584a00005a4a00005c4a00005e4a0000604a0000624a0000644a000000ca9a3b
+    m_SelectedIDs: 18480000
+    m_LastClickedID: 18456
+    m_ExpandedIDs: 00000000fc470000fe47000000480000024800000448000006480000084800000a4800000c4800000e48000010480000124800001448000016480000184800001a4800001c48000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -533,7 +533,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000444a0000464a0000484a00004a4a00004c4a00004e4a0000504a0000524a0000544a0000564a0000584a00005a4a00005c4a00005e4a0000604a0000624a0000644a000000ca9a3b
+    m_ExpandedIDs: 00000000fc470000fe47000000480000024800000448000006480000084800000a4800000c4800000e48000010480000124800001448000016480000184800001a4800001c48000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -625,9 +625,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 302.3053, y: 148.2763, z: -1217.3965}
+    m_Target: {x: 440.6476, y: 228.92073, z: -236.42717}
     speed: 2
-    m_Value: {x: 331.0566, y: 156.75383, z: -1215.7404}
+    m_Value: {x: 440.6476, y: 228.92073, z: -236.42717}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -678,9 +678,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 384.57742
+    m_Target: 380.8106
     speed: 2
-    m_Value: 368.01666
+    m_Value: 380.8106
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -769,6 +769,7 @@ MonoBehaviour:
     - {fileID: 1223876476369938004, guid: 8160979d6e492ad46bd2aca2827c9ca0, type: 2}
     - {fileID: 4145715701384977145, guid: 3333f4bf72a02df41abceedab9d2aa92, type: 2}
     - {fileID: -8308609209678545050, guid: 6d3754187680270438af941032414a41, type: 2}
+    - {fileID: 4255587590073118684, guid: 116ccd175c981c64d844e04d1775426c, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.79473686
       e01: 0
@@ -946,14 +947,30 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1.1105343
+    - e00: 0.9019541
       e01: 0
       e02: 0
-      e03: -301.0221
+      e03: -204.21649
       e10: 0
-      e11: 1.1105343
+      e11: 0.9019541
       e12: 0
-      e13: 178.80626
+      e13: 210.31186
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.84243196
+      e01: 0
+      e02: 0
+      e03: 138.81346
+      e10: 0
+      e11: 0.84243196
+      e12: 0
+      e13: 216.24377
       e20: 0
       e21: 0
       e22: 1
@@ -1030,7 +1047,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 17874
+  m_LastSelectedObjectID: -13570
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1063,7 +1080,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 303
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
