@@ -100,6 +100,7 @@ public class ChangeMap : MonoBehaviour
     }
     public void TerraChange()
     {
+        Debug.Log("Whyt");
         cameraAnim.Play("ZoomFadeOut");
         level.canHover = true;
         terraMap.SetActive(true);
