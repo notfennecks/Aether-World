@@ -53,6 +53,7 @@
      <Compile Include="Assets\Enemies\Ajiva\AjivaAI.cs" />
      <Compile Include="Assets\Enemies\Ajiva\RockProjectile.cs" />
      <Compile Include="Assets\Player\Scripts\PlayerShoot.cs" />
+     <Compile Include="Assets\Scripts\HealthPickup.cs" />
      <Compile Include="Assets\Player\Scripts\Abilities\AquaAegis.cs" />
      <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
      <Compile Include="Assets\Player\Scripts\Abilities\AirJump.cs" />

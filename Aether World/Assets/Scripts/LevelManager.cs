@@ -10,10 +10,19 @@ public class LevelManager : MonoBehaviour
     private GameObject player;
     public GameObject GoalPoint;
 
+    public struct level
+    {
+        bool victory;
+        string SceneName;
+    }
+
     private void Awake()
     {
         instance = this;
         player = GameObject.FindGameObjectWithTag("Player");
+        /*level Overworld1;
+        Overworld1.victory = false;
+        Overworld1.SceneName = SceneManager.GetSceneByName().name;*/
     }
 
     public void Respawn()
@@ -24,6 +33,7 @@ public class LevelManager : MonoBehaviour
 
     public void Victory()
     {
+        string levelname = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("LevelSelection");//There need to be something here to show the level was beaten, not just exited.
     }
 }
