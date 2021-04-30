@@ -8,14 +8,13 @@ public class DeepOneAI : MonoBehaviour
     public float detectDistance;
     public float spitDistance;
     private Transform player;
-    private Animator anim;
+    public Animator anim;
     public GameObject spit;
     public GameObject spitParent;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         Physics2D.IgnoreCollision(player.GetComponent<CapsuleCollider2D>(), GetComponent<BoxCollider2D>());
-        anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -38,6 +37,7 @@ public class DeepOneAI : MonoBehaviour
         if(distFromPlayer < spitDistance)
         {
             anim.SetBool("canAttack", true);
+            Debug.Log("why");
         }
         else
         {

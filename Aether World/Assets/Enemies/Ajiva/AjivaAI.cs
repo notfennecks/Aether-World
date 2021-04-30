@@ -10,7 +10,7 @@ public class AjivaAI : MonoBehaviour
     public float fireRate = 2f;
     private float nextFireTime;
     private Transform player;
-    private Animator anim;
+    public Animator anim;
     public GameObject rock;
     public GameObject rockParent;
 
@@ -18,7 +18,6 @@ public class AjivaAI : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         Physics2D.IgnoreCollision(player.GetComponent<CapsuleCollider2D>(), GetComponent<BoxCollider2D>());
-        anim = GetComponent<Animator>();
     }
 
     void Update()

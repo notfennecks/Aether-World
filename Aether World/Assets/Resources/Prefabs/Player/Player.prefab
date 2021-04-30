@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372609113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.7999998, z: -10}
+  m_LocalPosition: {x: 0, y: -0.79999983, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1499785318}
@@ -1001,7 +1001,6 @@ GameObject:
   - component: {fileID: 2023109948759332561}
   - component: {fileID: 2023109948759332574}
   - component: {fileID: 2023109948759332563}
-  - component: {fileID: 2402124469132535694}
   - component: {fileID: 2023109948759332560}
   - component: {fileID: 4845483178440164586}
   - component: {fileID: 2023109948759332562}
@@ -1096,10 +1095,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: d0898b0fcb33008419559273791b2a8f, type: 2}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12941837, y: -0.008092374}
+  m_Offset: {x: -0.12941837, y: -0.059327304}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1110,24 +1109,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7315693, y: 1.9788713}
+  m_Size: {x: 1.7315693, y: 1.8764015}
   m_EdgeRadius: 0
---- !u!70 &2402124469132535694
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2023109948759332575}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.12734866, y: 0}
-  m_Size: {x: 1.6623769, y: 2}
-  m_Direction: 0
 --- !u!50 &2023109948759332560
 Rigidbody2D:
   serializedVersion: 4
@@ -1267,7 +1250,9 @@ MonoBehaviour:
   aetherEffectSlider: {fileID: 5141246191526185202}
   aetherEffectSpeed: 0.03
   aetherRegenRate: 0.02
+  healthRegenRate: 0
   isDying: 0
+  levelManager: {fileID: 0}
 --- !u!114 &2763835431524754283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1280,6 +1265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014bb6494cd210e438fd171c7eb9ee5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aquaAegis: {fileID: 0}
+  isActive: 0
   aegisMoveMulti: 0.2
 --- !u!114 &1070773900
 MonoBehaviour:
@@ -1382,7 +1369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023109949796872261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.7999998, z: -10}
+  m_LocalPosition: {x: 0, y: -0.79999983, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2023109948759332561}

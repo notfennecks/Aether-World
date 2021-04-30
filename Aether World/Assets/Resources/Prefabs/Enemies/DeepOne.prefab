@@ -178,6 +178,7 @@ MonoBehaviour:
   speed: 5
   detectDistance: 15
   spitDistance: 3
+  anim: {fileID: 7637225470862023609}
   spit: {fileID: 377852866423655822, guid: 010d74e51a99904459a4b3b898e2e3a0, type: 3}
   spitParent: {fileID: 6730984569793179740}
 --- !u!50 &2046750384

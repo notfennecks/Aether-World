@@ -200,6 +200,7 @@ MonoBehaviour:
   detectDistance: 14
   rockThrowDistance: 6
   fireRate: 2
+  anim: {fileID: 8542860656525847389}
   rock: {fileID: 826313857116682663, guid: d572c7a15a02ceb48a9e7d99bda12403, type: 3}
   rockParent: {fileID: 8542860655740914738}
 --- !u!114 &8478833940959371322

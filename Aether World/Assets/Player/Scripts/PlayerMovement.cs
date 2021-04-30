@@ -62,12 +62,12 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (rb.velocity.y > 0)
+        if (rb.velocity.y > 0.1)
         {
             animator.SetBool("IsJumpingUp", true);
             animator.SetBool("IsJumpingDown", false);
         }
-        else if (rb.velocity.y < 0)
+        else if (rb.velocity.y < -0.1)
         {
             animator.SetBool("IsJumpingUp", false);
             animator.SetBool("IsJumpingDown", true);
@@ -135,7 +135,7 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D raycastHit = Physics2D.BoxCast(playerHitbox.bounds.center, playerHitbox.bounds.size, 0f, Vector2.down, extraHeight, groundLayerMask);
         Color rayColor;
 
-        if ( raycastHit.collider != null && rb.velocity.y == 0)
+        if ( raycastHit.collider != null) //&& rb.velocity.y == 0
         {
             rayColor = Color.green;
             jumpCount = 0;
