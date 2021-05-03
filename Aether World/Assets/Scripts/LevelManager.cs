@@ -10,11 +10,11 @@ public class LevelManager : MonoBehaviour
     private GameObject player;
     public GameObject GoalPoint;
 
-    public struct level
+    /*public struct level
     {
         bool victory;
         string SceneName;
-    }
+    }*/
 
     private void Awake()
     {
@@ -31,9 +31,9 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("LevelSelection");
     }
 
-    public void Victory()
+    /*public void Victory()
     {
-        string levelname = SceneManager.GetActiveScene().name;
+        public string levelname = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("LevelSelection");//There need to be something here to show the level was beaten, not just exited.
-    }
+    }*/
 }

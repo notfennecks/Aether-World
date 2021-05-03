@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelSelection : MonoBehaviour
 {
+    public static LevelSelection instance;
+
     [Header("Animation Variables")]
     public Animator overworldAnimator;
     public Animator terraAnimator;
@@ -27,6 +30,21 @@ public class LevelSelection : MonoBehaviour
 
     [HideInInspector]
     public bool canHover = true;
+
+    public bool unlocked;
+
+
+    public Image unlockImage;
+
+    //public GoalPoint gp;
+
+    private void Start()
+    {
+        //UpdateLevelImage();
+        //gp = gameObject.GetComponent<GoalPoint>();
+        //UpdateLevelStatus();
+    }
+
 
     public void SelectSocialSpace()
     {
@@ -161,6 +179,26 @@ public class LevelSelection : MonoBehaviour
         {
             zephyrAnimator.Play("ZephyrShrink");
         }
+    }
+
+    private void UpdateLevelImage()
+    {
+        if(!unlocked)
+        {
+            unlockImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            unlockImage.gameObject.SetActive(false);
+        }
+    }
+
+    public void UpdateLevelStatus(string levelName)
+    {
+        
+        
+        Debug.Log("the level just beaten was " + levelName);
+        
     }
 
     public void overworld01()

@@ -6798,6 +6798,9 @@ MonoBehaviour:
   zephyrSelect: {fileID: 743824642}
   zephyrHover: {fileID: 1799332027}
   canHover: 1
+  unlocked: 0
+  unlockImage: {fileID: 0}
+  gp: {fileID: 0}
 --- !u!1 &1400122122
 GameObject:
   m_ObjectHideFlags: 0
@@ -7615,6 +7618,7 @@ GameObject:
   - component: {fileID: 1538826993}
   - component: {fileID: 1538826992}
   - component: {fileID: 1538826991}
+  - component: {fileID: 1538826994}
   m_Layer: 5
   m_Name: Level01
   m_TagString: Untagged
@@ -7736,6 +7740,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538826989}
   m_CullTransparentMesh: 1
+--- !u!114 &1538826994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538826989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa6d360beaf57784cb78ce0bc8648b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overworldAnimator: {fileID: 0}
+  terraAnimator: {fileID: 0}
+  scoriaAnimator: {fileID: 0}
+  eldorisAnimator: {fileID: 0}
+  zephyrAnimator: {fileID: 0}
+  cameraAnimator: {fileID: 0}
+  overworldSelect: {fileID: 0}
+  overworldHover: {fileID: 0}
+  terraSelect: {fileID: 0}
+  terraHover: {fileID: 0}
+  scoriaSelect: {fileID: 0}
+  scoriaHover: {fileID: 0}
+  eldorisSelect: {fileID: 0}
+  eldorisHover: {fileID: 0}
+  zephyrSelect: {fileID: 0}
+  zephyrHover: {fileID: 0}
+  canHover: 1
+  unlocked: 0
+  unlockImage: {fileID: 0}
+  gp: {fileID: 0}
 --- !u!1 &1544563663
 GameObject:
   m_ObjectHideFlags: 0
