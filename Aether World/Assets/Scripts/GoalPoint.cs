@@ -8,23 +8,31 @@ public class GoalPoint : MonoBehaviour
 {
     //public static  LevelSelection LS;
     public string levelName;
-    public LevelSelection LS;
-   
+    public GameManager GameManager;
+    //public LevelSelection LS;
+
+    private void Start()
+    {
+        GameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            VictoryLevel();
+            //VictoryLevel();
             //SceneManager.LoadScene("LevelSelection");
             //LevelManager.instance.Victory();
+            SceneManager.LoadScene("LevelSelection");
+            GameManager.Victory(levelName);
         }
     }
    
-    public void VictoryLevel()
+    /*public void VictoryLevel()
     {
         SceneManager.LoadScene("LevelSelection");
-        LS.UpdateLevelStatus(levelName);
-    }
+        GM.Victory(levelName);
+    }*/
 
 
 

@@ -193,11 +193,11 @@ public class LevelSelection : MonoBehaviour
         }
     }
 
-    public void UpdateLevelStatus(string levelName)
+    public void UpdateLevelStatus()
     {
         
         
-        Debug.Log("the level just beaten was " + levelName);
+        
         
     }
 
