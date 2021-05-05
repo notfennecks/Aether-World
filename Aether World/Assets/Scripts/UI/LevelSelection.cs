@@ -37,9 +37,11 @@ public class LevelSelection : MonoBehaviour
     public Image unlockImage;
 
     //public GoalPoint gp;
+    public GameManager GameManager;
 
     private void Start()
     {
+        GameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         //UpdateLevelImage();
         //gp = gameObject.GetComponent<GoalPoint>();
         //UpdateLevelStatus();
@@ -223,7 +225,7 @@ public class LevelSelection : MonoBehaviour
 
     public void terra02()
     {
-        SceneManager.LoadScene("Terra02");
+        SceneManager.LoadScene(GameManager.Terra2.SceneName);
     }
 
     public void terra03()

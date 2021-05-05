@@ -6674,7 +6674,7 @@ GameObject:
   - component: {fileID: 1392801150}
   m_Layer: 5
   m_Name: LevelSelection
-  m_TagString: Untagged
+  m_TagString: LevelSelection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6800,7 +6800,7 @@ MonoBehaviour:
   canHover: 1
   unlocked: 0
   unlockImage: {fileID: 0}
-  gp: {fileID: 0}
+  GameManager: {fileID: 0}
 --- !u!1 &1400122122
 GameObject:
   m_ObjectHideFlags: 0
@@ -7771,7 +7771,7 @@ MonoBehaviour:
   canHover: 1
   unlocked: 0
   unlockImage: {fileID: 0}
-  gp: {fileID: 0}
+  GameManager: {fileID: 0}
 --- !u!1 &1544563663
 GameObject:
   m_ObjectHideFlags: 0
