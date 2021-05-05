@@ -261,7 +261,7 @@ public class GameManager : MonoBehaviour
                         if (Earth.resources >= 5)// they have some resources to spare
                         {
                             //IMPLEMENT LATER
-                            Terra2.SceneName = "Terra2B";
+                            Terra2.SceneName = "Terra02B";
                             Earth.resources -= 5;
                             Debug.Log("Terra2 has changed to Terra2B");
                         }
