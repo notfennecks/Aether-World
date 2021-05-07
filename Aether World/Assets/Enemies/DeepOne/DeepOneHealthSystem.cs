@@ -7,9 +7,12 @@ public class DeepOneHealthSystem : MonoBehaviour
     public float maxHealth;
     private float currentHealth;
 
+    public GameManager gm;
+
     void Start()
     {
         currentHealth = maxHealth;
+        gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
     public void TakeDamage(float damage)
     {
@@ -17,6 +20,7 @@ public class DeepOneHealthSystem : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(this.gameObject);
+            gm.deepKilled += 1;
         }
     }
 }

@@ -11,13 +11,18 @@ public class Projectile : MonoBehaviour
 
     public Rigidbody2D rb;
     
-    public GameObject earthExplosion;
+    public GameObject earthExplosion = null;
     public bool enemy;
+
+    public CircleCollider2D rockAOE = null;
 
     private void Start()
     {
         Destroy(gameObject, TimeToLive);
-        
+        if (rockAOE != null)
+        {
+            rockAOE.enabled = false;
+        }
     }
     private void FixedUpdate()
     {
@@ -28,8 +33,15 @@ public class Projectile : MonoBehaviour
     {
         if(collision.name.Contains("Base"))
         {
+            if (name.Contains("Rock"))
+            {
+                rockAOE.enabled = true;
+                Instantiate(earthExplosion, rb.transform, false);
+                ProjectileSpeed = 0f;
+                Destroy(this.gameObject, 0.4f);
+                return;
+            }
             Destroy(this.gameObject);
-            //Debug.Log(projectile.name + " has just hit the ground and was destroyed"); 
         }
         if(projectile.name.Contains("BasicShot"))
         {
@@ -128,22 +140,22 @@ public class Projectile : MonoBehaviour
             if (collision.name.Contains("Pixie"))
             {
                 collision.GetComponent<PixieHealthSystem>().TakeDamage(ProjectileDamage + 1);
-                Destroy(this.gameObject);
+                Destroy(this.gameObject, 0.4f);
             }
             if (collision.name.Contains("DeepOne"))
             {
                 collision.GetComponent<DeepOneHealthSystem>().TakeDamage(ProjectileDamage);
-                Destroy(this.gameObject);
+                Destroy(this.gameObject, 0.4f);
             }
             if (collision.name.Contains("BurningOrb"))
             {
                 collision.GetComponent<BurningOrbHealthSystem>().TakeDamage(ProjectileDamage + 1);
-                Destroy(this.gameObject);
+                Destroy(this.gameObject, 0.4f);
             }
             if (collision.name.Contains("Ajiva"))
             {
                 collision.GetComponent<AjivaHealthSystem>().TakeDamage(ProjectileDamage);
-                Destroy(this.gameObject);
+                Destroy(this.gameObject, 0.4f);
             }
         }
         /*if (collision.name.Contains("Pixie"))

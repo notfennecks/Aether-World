@@ -8,9 +8,12 @@ public class PlayerManager : MonoBehaviour
 
     GameObject player;
 
+    GameManager gm;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
     void Update()
     {

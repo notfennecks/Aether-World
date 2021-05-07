@@ -34,6 +34,8 @@ public class EssenceManager : MonoBehaviour
     public float fireJumpForce;
     public int fireMaxJumps;
 
+    private GameManager gm;
+
     private void Awake()
     {
         pm = GetComponent<PlayerMovement>();
@@ -41,6 +43,7 @@ public class EssenceManager : MonoBehaviour
 
     void Start()
     {
+        gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
         playerSprite = GetComponent<SpriteRenderer>();
         eiconmanage = GetComponentInChildren<EssenceIconManager>();
         SwitchEssence("BASIC");
@@ -50,22 +53,22 @@ public class EssenceManager : MonoBehaviour
     void Update()
     {
         //All the stance switching code below is pretty straighforward. I just commented out debugs cause they get annoying in console.
-        if (Input.GetButtonDown("Essence 1"))
+        if (Input.GetButtonDown("Essence 1") && gm.AirE.unlocked)
         {
             SwitchEssence("AIR");
             //Debug.Log("Switched to " + currentEssence + " stance!");
         }
-        if (Input.GetButtonDown("Essence 2"))
+        if (Input.GetButtonDown("Essence 2") && gm.EarthE.unlocked)
         {
             SwitchEssence("EARTH");
             //Debug.Log("Switched to " + currentEssence + " essence!");
         }
-        if (Input.GetButtonDown("Essence 3"))
+        if (Input.GetButtonDown("Essence 3") && gm.WaterE.unlocked)
         {
             SwitchEssence("WATER");
             //Debug.Log("Switched to " + currentEssence + " essence!");
         }
-        if (Input.GetButtonDown("Essence 4"))
+        if (Input.GetButtonDown("Essence 4") && gm.FireE.unlocked)
         {
             SwitchEssence("FIRE");
             //Debug.Log("Switched to " + currentEssence + " stance!");

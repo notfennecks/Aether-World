@@ -8,9 +8,12 @@ public class AjivaHealthSystem : MonoBehaviour
     private float currentHealth;
     private bool isdying = false;
     private bool isDead = false;
+
+    public GameManager gm;
     void Start()
     {
         currentHealth = maxHealth;
+        gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -19,6 +22,7 @@ public class AjivaHealthSystem : MonoBehaviour
         if (isDead)
         {
             Destroy(this.gameObject);
+            gm.ajivaKilled += 1;
         }
     }
 

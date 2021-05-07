@@ -10,10 +10,14 @@ public class PixieHealthSystem : MonoBehaviour
     private bool isDead = false;
     private float deathAnimTime = 0.7f;
     private Animator anim;
+
+    public GameManager gm;
+
     void Start()
     {
         currentHealth = maxHealth;
         anim = GetComponent<Animator>();
+        gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
     }
 
     private void Update()
@@ -29,6 +33,7 @@ public class PixieHealthSystem : MonoBehaviour
         if(isDead)
         {
             Destroy(this.gameObject);
+            gm.pixieKilled += 1;
         }
     }
 

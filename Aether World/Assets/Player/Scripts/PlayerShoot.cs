@@ -23,10 +23,6 @@ public class PlayerShoot : MonoBehaviour
     public int airBurstAmount = 3;
     public float airBurstDelay = 0.2f;
 
-    private float chargeStartTime;
-    public bool earthChargedState;
-    public Vector3 earthPScale;
-
 
     private void Start()//this figures out which way the player is facing, see player movement to see how it works
     {
@@ -54,27 +50,6 @@ public class PlayerShoot : MonoBehaviour
             TimeUntilShoot = Time.time + FireRate;
         }
 
-        /*if (Input.GetMouseButtonDown(1))
-        {
-            chargeStartTime = Time.time;
-        }
-        if (Input.GetMouseButton(1))
-        {
-            earthChargedState = true;
-            float chargeTime = Time.time - chargeStartTime;
-        }
-        if (Input.GetMouseButtonUp(0) && TimeUntilShoot < Time.time && em.currentEssence == "EARTH")
-        {
-            float chargeTime = Time.time - chargeStartTime;
-            if (chargeTime < 0.5)
-                chargeTime = 0.5f;
-            earthPScale = new Vector3(chargeTime, chargeTime, 1f);
-            Shoot();
-            chargeTime = 0.5f;
-            TimeUntilShoot = Time.time + FireRate;
-            earthChargedState = false;
-        }*/
-
         mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
     }
 
@@ -96,7 +71,6 @@ public class PlayerShoot : MonoBehaviour
         else if (em.currentEssence == "EARTH")
         {
             GameObject earthProjectile = Instantiate(EarthProjectile, FiringPoint.position, FiringPoint.rotation);
-            //earthProjectile.transform.localScale = earthPScale;
         }
         else if (em.currentEssence == "BASIC")
         {
@@ -128,12 +102,4 @@ public class PlayerShoot : MonoBehaviour
             yield return new WaitForSeconds(airBurstDelay);
         }
     }
-
-    private float CalculateChargeForce(float chargeTime)
-    {
-        float maxChargeTime = 2f;
-        float chargeTimeNormalized = Mathf.Clamp01(chargeTime / maxChargeTime);
-        return chargeTimeNormalized;
-    }
-
 }

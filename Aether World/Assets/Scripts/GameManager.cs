@@ -10,6 +10,22 @@ public class GameManager : MonoBehaviour
     private LevelSelection LS;
     private GoalPoint GP;
 
+    public int pixieKilled = 0;
+    public int ajivaKilled = 0;
+    public int deepKilled = 0;
+    public int burningKilled = 0;
+
+    public struct essence
+    {
+        public bool unlocked;
+        public int amountToUnlock;
+        public int currentAmount;
+    }
+
+    public essence AirE;
+    public essence WaterE;
+    public essence EarthE;
+    public essence FireE;
 
     public struct level
     {
@@ -65,9 +81,43 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         //Get a component reference to the attached LevelManager script
+
+        AirE.unlocked = false;
+        AirE.amountToUnlock = 5;
+        EarthE.unlocked = false;
+        EarthE.amountToUnlock = 5;
+        WaterE.unlocked = false;
+        WaterE.amountToUnlock = 5;
+        FireE.unlocked = false;
+        FireE.amountToUnlock = 5;
         
 
 
+    }
+
+    private void Update()
+    {
+        AirE.currentAmount = pixieKilled;
+        EarthE.currentAmount = ajivaKilled;
+        WaterE.currentAmount = deepKilled;
+        FireE.currentAmount = burningKilled;
+
+        if (AirE.currentAmount == AirE.amountToUnlock)
+        {
+            AirE.unlocked = true;
+        }
+        if (EarthE.currentAmount == EarthE.amountToUnlock)
+        {
+            EarthE.unlocked = true;
+        }
+        if (WaterE.currentAmount == WaterE.amountToUnlock)
+        {
+            WaterE.unlocked = true;
+        }
+        if (FireE.currentAmount ==FireE.amountToUnlock)
+        {
+            FireE.unlocked = true;
+        }
     }
 
     private void Start()
@@ -295,18 +345,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-    }
+}
 
 
 }
