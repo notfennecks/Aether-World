@@ -1,0 +1,942 @@
+fileFormatVersion: 2
+guid: dbd67d484bec3ce438243b072ff31ae9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3006582270704584608
+    second: PortalSprite_0
+  - first:
+      213: -6000356710566860871
+    second: PortalSprite_1
+  - first:
+      213: -1481625573511651712
+    second: PortalSprite_2
+  - first:
+      213: -8358892961775067844
+    second: PortalSprite_3
+  - first:
+      213: 7480458654091952315
+    second: PortalSprite_4
+  - first:
+      213: -2994401589328038317
+    second: PortalSprite_5
+  - first:
+      213: 2217832512714043313
+    second: PortalSprite_6
+  - first:
+      213: -6346632062996388952
+    second: PortalSprite_7
+  - first:
+      213: -3442300985419461922
+    second: PortalSprite_8
+  - first:
+      213: -4652236289045863921
+    second: PortalSprite_9
+  - first:
+      213: 3451429641288014415
+    second: PortalSprite_10
+  - first:
+      213: 6964352593384151411
+    second: PortalSprite_11
+  - first:
+      213: -5799536370013937839
+    second: PortalSprite_12
+  - first:
+      213: 4012631620491351622
+    second: PortalSprite_13
+  - first:
+      213: 5917476173149218021
+    second: PortalSprite_14
+  - first:
+      213: -5737418655696372199
+    second: PortalSprite_15
+  - first:
+      213: 7465821296730580028
+    second: PortalSprite_16
+  - first:
+      213: -6087129520823642077
+    second: PortalSprite_17
+  - first:
+      213: 8021051183331542723
+    second: PortalSprite_18
+  - first:
+      213: 2945580836577624628
+    second: PortalSprite_19
+  - first:
+      213: -343649958245184867
+    second: PortalSprite_20
+  - first:
+      213: -5374040145506748415
+    second: PortalSprite_21
+  - first:
+      213: 8286380497373306180
+    second: PortalSprite_22
+  - first:
+      213: -3913402479723232591
+    second: PortalSprite_23
+  - first:
+      213: -6420417964350124404
+    second: PortalSprite_24
+  - first:
+      213: 3455539523441943499
+    second: PortalSprite_25
+  - first:
+      213: -5164461523317165466
+    second: PortalSprite_26
+  - first:
+      213: 1142060735145043968
+    second: PortalSprite_27
+  - first:
+      213: 7194456079222596964
+    second: PortalSprite_28
+  - first:
+      213: 1517900962589451605
+    second: PortalSprite_29
+  - first:
+      213: -8522686469505718942
+    second: PortalSprite_30
+  - first:
+      213: 1866498630536231986
+    second: PortalSprite_31
+  - first:
+      213: -8809033597416620448
+    second: PortalSprite_32
+  - first:
+      213: -3208284416684604482
+    second: PortalSprite_33
+  - first:
+      213: -1553872453412810548
+    second: PortalSprite_34
+  - first:
+      213: -2963881773446261643
+    second: PortalSprite_35
+  - first:
+      213: -7587596550299013156
+    second: PortalSprite_36
+  - first:
+      213: 6406281196234177874
+    second: PortalSprite_37
+  - first:
+      213: -8724997034924924242
+    second: PortalSprite_38
+  - first:
+      213: 3482665670948817509
+    second: PortalSprite_39
+  - first:
+      213: 6182986092503034886
+    second: PortalSprite_40
+  - first:
+      213: -5389195826375222138
+    second: PortalSprite_41
+  - first:
+      213: 7092017832744973260
+    second: PortalSprite_42
+  - first:
+      213: -1707242597738387783
+    second: PortalSprite_43
+  - first:
+      213: -4862556618624202978
+    second: PortalSprite_44
+  - first:
+      213: -8930015291098282142
+    second: PortalSprite_45
+  - first:
+      213: 20236946584434716
+    second: PortalSprite_46
+  - first:
+      213: -2280895995736583704
+    second: PortalSprite_47
+  - first:
+      213: -1290079725228723260
+    second: PortalSprite_48
+  - first:
+      213: 8339126265870893075
+    second: PortalSprite_49
+  - first:
+      213: -7039066153618657795
+    second: PortalSprite_50
+  - first:
+      213: -8478533288228532919
+    second: PortalSprite_51
+  - first:
+      213: 8714602578232832996
+    second: PortalSprite_52
+  - first:
+      213: 7769933652775503033
+    second: PortalSprite_53
+  - first:
+      213: 7250575695217111305
+    second: PortalSprite_54
+  - first:
+      213: -4194605766406076513
+    second: PortalSprite_55
+  - first:
+      213: -4114707649555559790
+    second: PortalSprite_56
+  - first:
+      213: 531725900335155916
+    second: PortalSprite_57
+  - first:
+      213: 7462465817869343031
+    second: PortalSprite_58
+  - first:
+      213: -952597863313281390
+    second: PortalSprite_59
+  - first:
+      213: 5815491868866663769
+    second: PortalSprite_60
+  - first:
+      213: 6928723590868382599
+    second: PortalSprite_61
+  - first:
+      213: -4376713729913119518
+    second: PortalSprite_62
+  - first:
+      213: 6502519469075926770
+    second: PortalSprite_63
+  - first:
+      213: -6595478110040446795
+    second: PortalSprite_64
+  - first:
+      213: 5660344332113178663
+    second: PortalSprite_65
+  - first:
+      213: -4706106021196509668
+    second: PortalSprite_66
+  - first:
+      213: 5846692028865247909
+    second: PortalSprite_67
+  - first:
+      213: 7554514149678242850
+    second: PortalSprite_68
+  - first:
+      213: 1152730346768165379
+    second: PortalSprite_69
+  - first:
+      213: -5617086573336213334
+    second: PortalSprite_70
+  - first:
+      213: -919593396137348595
+    second: PortalSprite_72
+  - first:
+      213: 4543111419841582721
+    second: PortalSprite_73
+  - first:
+      213: 6743387771337557014
+    second: PortalSprite_74
+  - first:
+      213: 554547632543357354
+    second: PortalSprite_75
+  - first:
+      213: -4903740356659193280
+    second: PortalSprite_76
+  - first:
+      213: -4369987505781991495
+    second: PortalSprite_77
+  - first:
+      213: -8356183556163876318
+    second: PortalSprite_78
+  - first:
+      213: -8306223735489352252
+    second: PortalSprite_79
+  - first:
+      213: 634863846177089071
+    second: PortalSprite_80
+  - first:
+      213: 8791764377091454862
+    second: PortalSprite_81
+  - first:
+      213: 1773208872029847221
+    second: PortalSprite_84
+  - first:
+      213: -7011167507907465990
+    second: PortalSprite_85
+  - first:
+      213: 1923359950056005676
+    second: PortalSprite_86
+  - first:
+      213: 6039429926397051809
+    second: PortalSprite_87
+  - first:
+      213: 2837271369958935757
+    second: PortalSprite_88
+  - first:
+      213: -9087217392372155141
+    second: PortalSprite_89
+  - first:
+      213: -3183986162178301729
+    second: PortalSprite_90
+  - first:
+      213: -2454505752983811044
+    second: PortalSprite_91
+  - first:
+      213: 2062125814875173778
+    second: PortalSprite_92
+  - first:
+      213: -1241424370188677596
+    second: PortalSprite_93
+  - first:
+      213: 7750042243601416796
+    second: PortalSprite_96
+  - first:
+      213: -1141989735510225238
+    second: PortalSprite_97
+  - first:
+      213: 173381093450995061
+    second: PortalSprite_98
+  - first:
+      213: -7624294581794288924
+    second: PortalSprite_99
+  - first:
+      213: -7912425042292781467
+    second: PortalSprite_100
+  - first:
+      213: -5672072018388804818
+    second: PortalSprite_101
+  - first:
+      213: 3098793404958939743
+    second: PortalSprite_102
+  - first:
+      213: 5220680494433807791
+    second: PortalSprite_103
+  - first:
+      213: -1485523781095463280
+    second: PortalSprite_104
+  - first:
+      213: -7659420019861112336
+    second: PortalSprite_105
+  - first:
+      213: 1529329255839533316
+    second: PortalSprite_108
+  - first:
+      213: 5040790122361508183
+    second: PortalSprite_109
+  - first:
+      213: 3279426094716300971
+    second: PortalSprite_110
+  - first:
+      213: -476684484653011118
+    second: PortalSprite_111
+  - first:
+      213: 8060649368383570334
+    second: PortalSprite_112
+  - first:
+      213: -8825076862561562807
+    second: PortalSprite_113
+  - first:
+      213: -2858302965440666542
+    second: PortalSprite_114
+  - first:
+      213: 3245216101772484949
+    second: PortalSprite_115
+  - first:
+      213: 1148650165053702241
+    second: PortalSprite_116
+  - first:
+      213: 7194024345420973791
+    second: PortalSprite_117
+  - first:
+      213: -8097306047554166492
+    second: PortalSprite_120
+  - first:
+      213: 7790732733474029082
+    second: PortalSprite_121
+  - first:
+      213: -135671429641843060
+    second: PortalSprite_122
+  - first:
+      213: -3140402820936770493
+    second: PortalSprite_123
+  - first:
+      213: -3053002908584682094
+    second: PortalSprite_124
+  - first:
+      213: -2889657355618451278
+    second: PortalSprite_125
+  - first:
+      213: 6616724190953748194
+    second: PortalSprite_126
+  - first:
+      213: -8134243822630762094
+    second: PortalSprite_127
+  - first:
+      213: 3917858402689864237
+    second: PortalSprite_128
+  - first:
+      213: -5193187245914416856
+    second: PortalSprite_129
+  - first:
+      213: 8768288289270187133
+    second: PortalSprite_131
+  - first:
+      213: 3119131235925306272
+    second: PortalSprite_132
+  - first:
+      213: -1730280857687236265
+    second: PortalSprite_133
+  - first:
+      213: 3895554655008843236
+    second: PortalSprite_134
+  - first:
+      213: 1024522498150673153
+    second: PortalSprite_135
+  - first:
+      213: -3219654949817818051
+    second: PortalSprite_136
+  - first:
+      213: -5640347901110005094
+    second: PortalSprite_137
+  - first:
+      213: -571561079983699564
+    second: PortalSprite_138
+  - first:
+      213: 971663864005962088
+    second: PortalSprite_139
+  - first:
+      213: -8644977976232446761
+    second: PortalSprite_71
+  - first:
+      213: 527178296090568566
+    second: PortalSprite_82
+  - first:
+      213: -8445087451980370919
+    second: PortalSprite_83
+  - first:
+      213: -1511722159098028318
+    second: PortalSprite_94
+  - first:
+      213: -5283716552885137543
+    second: PortalSprite_95
+  - first:
+      213: 3324557139682576575
+    second: PortalSprite_106
+  - first:
+      213: -4495495727451297582
+    second: PortalSprite_107
+  - first:
+      213: 3719926544978587996
+    second: PortalSprite_118
+  - first:
+      213: -5262119032372351282
+    second: PortalSprite_119
+  - first:
+      213: 5863145025768220724
+    second: PortalSprite_130
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PortalSprite_0
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 563
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7855945a689b920800000000000000
+      internalID: 3006582270704584608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_1
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 564
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7e70dec537abca0800000000000000
+      internalID: -6000356710566860871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_2
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 562
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08e14b01465307be0800000000000000
+      internalID: -1481625573511651712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_3
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 562
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d52e9732f3ffb80800000000000000
+      internalID: -8358892961775067844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_4
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 563
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb0c522438defc760800000000000000
+      internalID: 7480458654091952315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_5
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 563
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356bc399e9fb176d0800000000000000
+      internalID: -2994401589328038317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_6
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 493
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bfe1a37be257ce10800000000000000
+      internalID: 2217832512714043313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_7
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 493
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3eefcb3cb3ce7a0800000000000000
+      internalID: -6346632062996388952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_8
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 492
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda881aed7d7a30d0800000000000000
+      internalID: -3442300985419461922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_9
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 493
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f026d346ebfef6fb0800000000000000
+      internalID: -4652236289045863921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_10
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 491
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ad938e8f0f5ef20800000000000000
+      internalID: 3451429641288014415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_11
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 493
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3799b33f8c956a060800000000000000
+      internalID: 6964352593384151411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_12
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 492
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f5c531668e38fa0800000000000000
+      internalID: -5799536370013937839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_13
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 492
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64613e1f23bbfa730800000000000000
+      internalID: 4012631620491351622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_14
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 492
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4a5633a391f1250800000000000000
+      internalID: 5917476173149218021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_15
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 492
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91eb48b71289060b0800000000000000
+      internalID: -5737418655696372199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_16
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 492
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c342c2ce9eceb9760800000000000000
+      internalID: 7465821296730580028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PortalSprite_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 493
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3285389a3fb268ba0800000000000000
+      internalID: -6087129520823642077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

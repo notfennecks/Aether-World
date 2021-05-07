@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 237626549150883759}
   - component: {fileID: 4158570433411788099}
   - component: {fileID: 5953125129007167576}
+  - component: {fileID: 4259279825014535375}
   m_Layer: 0
   m_Name: HealthPickup
   m_TagString: Untagged
@@ -73,8 +74,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: 1a1244f8d8206194795e075c765d718a, type: 3}
-  m_Color: {r: 1, g: 0.28773582, b: 0.6837586, a: 1}
+  m_Sprite: {fileID: 4606908045521496030, guid: 4394df6a1ac4a384e91750b1fb994b84, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -112,4 +113,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e32904e33424f34eabdde5a134d2162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthAmount: 0
+  HealthAmount: 25
+--- !u!95 &4259279825014535375
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8159456523468876828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea369ff106fea1548a45ea0d9717e0be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

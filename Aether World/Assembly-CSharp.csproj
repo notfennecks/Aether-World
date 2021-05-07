@@ -89,6 +89,8 @@
     <Compile Include="Assets\Scripts\Dialogue.cs" />
     <Compile Include="Assets\Enemies\Pixie\PixieAI.cs" />
     <Compile Include="Assets\Enemies\DeepOne\DeepOneAI.cs" />
+    <Compile Include="Assets\PlayerManager.cs" />
+    <Compile Include="Assets\PlayerHUD.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
