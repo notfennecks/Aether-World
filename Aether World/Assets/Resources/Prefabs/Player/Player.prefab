@@ -6447,6 +6447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1044408734350354905}
   controlsMenu: {fileID: 656902849862300448}
+  progressMenu: {fileID: 6730063397317075183}
   airProgress: {fileID: 308832248255185889}
   earthProgress: {fileID: 8601119745279699818}
   waterProgress: {fileID: 3968342456109174951}
