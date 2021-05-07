@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
+    public AudioSource jumpSound;
+
     [SerializeField] private float SlopeCheckDistance;
 
     [SerializeField] private LayerMask groundLayerMask;
@@ -126,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = movement;
             jumpCount++;
+            jumpSound.Play();
         }
     }
 
