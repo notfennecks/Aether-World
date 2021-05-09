@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Overworld/Overworld02.unity
     guid: 0a90fa5f1481d034c9aa209ff4f52f11
   - enabled: 1
+    path: Assets/Scenes/Levels/Overworld/Overworld02B.unity
+    guid: 6c81fe1a1c110454689b926b623f451f
+  - enabled: 1
     path: Assets/Scenes/Levels/Overworld/Overworld03.unity
     guid: 0895b9e14a8e1bd45b0355eea416f7fa
   - enabled: 1
@@ -53,6 +56,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Scoria/Scoria02.unity
     guid: 243d1431a5abfa14ca89a4082f6b60f2
+  - enabled: 1
+    path: Assets/Scenes/Levels/Eldoris/Eldoris02B.unity
+    guid: 6216668edbcb8e44d9d986301d5aa0aa
   - enabled: 1
     path: Assets/Scenes/Levels/Scoria/Scoria03.unity
     guid: fb85e6f42517ae149ac0e8adf34e3050

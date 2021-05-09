@@ -210,7 +210,7 @@ public class LevelSelection : MonoBehaviour
 
     public void overworld02()
     {
-        SceneManager.LoadScene("Overworld02");
+        SceneManager.LoadScene(GameManager.Overworld2.SceneName);
     }
 
     public void overworld03()
@@ -240,7 +240,7 @@ public class LevelSelection : MonoBehaviour
 
     public void eldoris02()
     {
-        SceneManager.LoadScene("Eldoris02");
+        SceneManager.LoadScene(GameManager.Eldoris2.SceneName);
     }
 
     public void eldoris03()

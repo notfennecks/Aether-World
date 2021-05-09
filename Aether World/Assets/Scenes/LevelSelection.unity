@@ -6672,6 +6672,7 @@ GameObject:
   - component: {fileID: 1392801146}
   - component: {fileID: 1392801145}
   - component: {fileID: 1392801150}
+  - component: {fileID: 1392801149}
   m_Layer: 5
   m_Name: LevelSelection
   m_TagString: LevelSelection
@@ -6769,6 +6770,19 @@ RectTransform:
   m_AnchoredPosition: {x: 390, y: 219.5}
   m_SizeDelta: {x: 1066.0591, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1392801149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392801144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45a8cf52baccc14c86818b9c1198e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 6746586096376804184, guid: 895658ae1426d4a4aaa1bbc3a5e03237, type: 3}
 --- !u!114 &1392801150
 MonoBehaviour:
   m_ObjectHideFlags: 0

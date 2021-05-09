@@ -129,11 +129,13 @@ public class GameManager : MonoBehaviour
         Overworld1.complete = false;
         Overworld1.SceneName = "Overworld01";
         Overworld2.complete = false;
-        Overworld3.complete = false;//establish the default data for the overworld, levels 2 and 3 of each main world don't get their scene names yet
+        Overworld2.SceneName = "Overworld02";
+        Overworld3.complete = false;//establish the default data for the overworld
 
         Eldoris1.complete = false;
         Eldoris1.SceneName = "Eldoris01";
         Eldoris2.complete = false;
+        Eldoris2.SceneName = "Eldoris02";
         Eldoris3.complete = false;//establish the default data for eldoris
 
         Scoria1.complete = false;
@@ -144,9 +146,9 @@ public class GameManager : MonoBehaviour
         Terra1.complete = false;
         Terra1.SceneName = "Terra01";
         Terra2.complete = false;
-        Terra2.SceneName = "Terra2A";
+        Terra2.SceneName = "Terra02";
         Terra3.complete = false;
-        Terra3.SceneName = "Terra3A";//establish default data for terra
+        Terra3.SceneName = "Terra03";//establish default data for terra
 
         Zephyr1.complete = false;
         Zephyr1.SceneName = "Zephyr01";
@@ -154,9 +156,9 @@ public class GameManager : MonoBehaviour
         Zephyr3.complete = false;//establish default data for zephyr
 
         Earth.PlayerOpinion = 8;//sets all the factions starting opinions of the player. Helps determine what they will do.
-        Water.PlayerOpinion = 9;
+        Water.PlayerOpinion = 8;
         Fire.PlayerOpinion = 5;
-        Air.PlayerOpinion = 8;
+        Air.PlayerOpinion = 6;
         Earth.resources = 10;//sets all the factions starting resources
         Water.resources = 10;
         Fire.resources = 10;
@@ -182,11 +184,13 @@ public class GameManager : MonoBehaviour
         {
             Overworld1.complete = true;
             Debug.Log("The player has beaten Overworld 1");
+            FactionActivity("Overworld");
         }
         if (levelName.Contains("Eldoris1"))
         {
             Eldoris1.complete = true;
             Debug.Log("The player has beaten Eldoris 1");
+            FactionActivity("Eldoris");
         }
         if (levelName.Contains("Scoria1"))
         {
@@ -337,6 +341,74 @@ public class GameManager : MonoBehaviour
                         //IMPLEMENT LATER
                         //they want to fortify themselves, they can have two levels of fortification (Terra3B and 3C)
                         //If those are both done they will weaken the Air or fire faction, depending on which is stronger
+                    }
+
+                }
+
+
+            }
+        }
+        // This is for the Water faction
+        if(Water.defeated == false)//can't do anything if they've been defeated
+        { 
+            if(Eldoris1.complete == false)//this is if the player has not beaten a single eldoris level yet
+            {
+                Fire.resources -= 2;//The Water faction will try to make sure the fire faction doesn't get an upper hand on them
+            }
+            else if(Eldoris1.complete == true)//this means the player beat at least the first Eldoris level
+            {
+                if (Eldoris2.complete == false)//this means ONLY the first Eldoris level has been completed
+                {
+                    if (Water.PlayerOpinion <= 0)//this means the waters opinion of the player hit the negatives, or 0. 
+                    {
+                        Earth.PlayerOpinion = 0;
+                        //IMPLEMENT LATER
+                        //They are most likely going to attack the overworld
+                    }
+                    else if (Water.PlayerOpinion > 0 && Water.PlayerOpinion <= 5)//this means they've been attacked recently, they will likely strike back
+                    {
+                        //IMPLEMENT LATER
+                        if (Water.resources >= 7)// they have some resources to spare
+                        {
+                            //IMPLEMENT LATER
+                            Overworld2.SceneName = "Overworld02B";
+                            Water.resources -= 7;
+                            Debug.Log("Overworld2 has changed to Overworld2B");
+                        }
+                        else if(Water.resources >= 3 && Water.resources < 7)//they dont have the resources to launch a counterattack
+                        {
+                            //IMPLEMENT LATER
+                            Eldoris2.SceneName = "Eldoris02B";
+                            Water.resources -= 3;
+                            Debug.Log("Eldoris2 has changed to Eldoris2B");
+                        }
+                    }
+                    else if (Water.PlayerOpinion > 5)// the first level has been beaten, but not recently
+                    {
+                        //IMPLEMENT LATER
+                        if (Water.resources >= 3 && Water.resources < 7)//they will use some resources to fortify
+                        {
+                            //IMPLEMENT LATER
+                            Eldoris2.SceneName = "Eldoris02B";
+                            Water.resources -= 3;
+                            Debug.Log("Eldoris2 has changed to Eldoris2B");
+                        }
+                        //Otherwise they will go after the fire faction
+                        //If they can't do anything else, they will gain some resources
+                    }
+                }
+                else if (Eldoris2.complete == true)//this means both Eldoris 1 and 2 are completed
+                {
+                    if (Water.PlayerOpinion <= 5)//they've been attacked recently, and are down to their last level
+                    {
+                        //IMPLEMENT LATER
+                        //they will panick and want to fortify themselves as much as possible
+                    }
+                    else if (Water.PlayerOpinion > 4)//they haven't been attacked recently
+                    {
+                        //IMPLEMENT LATER
+                        //They realize they likely won't hold forever, instead opting to make a new foothold somewhere else 
+                        //If those are both done they will weaken the fire faction
                     }
 
                 }
