@@ -54,6 +54,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Eldoris/Eldoris02.unity
     guid: ddc9b28c72588254a867fe792a6c6e1f
   - enabled: 1
+    path: Assets/Scenes/Levels/Eldoris/Eldoris02B.unity
+    guid: 6216668edbcb8e44d9d986301d5aa0aa
+  - enabled: 1
+    path: Assets/Scenes/Levels/Eldoris/Eldoris02C.unity
+    guid: 406e1216b76a21345948cca1d48a1ff3
+  - enabled: 1
     path: Assets/Scenes/Levels/Eldoris/Eldoris03.unity
     guid: a7d4be1558925254bbd78aa9550cd57d
   - enabled: 1
@@ -62,9 +68,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Scoria/Scoria02.unity
     guid: 243d1431a5abfa14ca89a4082f6b60f2
-  - enabled: 1
-    path: Assets/Scenes/Levels/Eldoris/Eldoris02B.unity
-    guid: 6216668edbcb8e44d9d986301d5aa0aa
   - enabled: 1
     path: Assets/Scenes/Levels/Scoria/Scoria03.unity
     guid: fb85e6f42517ae149ac0e8adf34e3050

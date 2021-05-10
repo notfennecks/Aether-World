@@ -141,6 +141,7 @@ public class GameManager : MonoBehaviour
         Scoria1.complete = false;
         Scoria1.SceneName = "Scoria01";
         Scoria2.complete = false;
+        Scoria2.SceneName = "Scoria2";
         Scoria3.complete = false;//establish default data for scoria
 
         Terra1.complete = false;
@@ -197,6 +198,7 @@ public class GameManager : MonoBehaviour
         {
             Scoria1.complete = true;
             Debug.Log("The player has beaten Scoria 1");
+            FactionActivity("Scoria");
         }
         if (levelName.Contains("Terra1"))
         {
@@ -233,7 +235,7 @@ public class GameManager : MonoBehaviour
                 Earth.PlayerOpinion += 1;
                 Earth.resources += 2;
                 Water.PlayerOpinion -= 4;//the Water faction is mostly harmed by the player completing one of their levels
-                Water.resources += 1;
+                Water.resources -= 1;
                 Fire.PlayerOpinion += 5;//the fire faction gets bonuses  instead
                 Fire.resources += 4;
                 Air.PlayerOpinion += 1;
@@ -241,7 +243,7 @@ public class GameManager : MonoBehaviour
                 break;
             case "Terra":
                 Earth.PlayerOpinion -= 4;
-                Earth.resources += 1;
+                Earth.resources -= 1;
                 Water.PlayerOpinion += 2;
                 Water.resources += 2;
                 Fire.PlayerOpinion += 3;//the fire faction gets a slight boost in resources when a terra level is attacked
@@ -255,7 +257,7 @@ public class GameManager : MonoBehaviour
                 Water.PlayerOpinion += 4;
                 Water.resources += 3;
                 Fire.PlayerOpinion -= 5;//the fire faction really doesn't like when the player completes one of their levels
-                Fire.resources += 1;
+                Fire.resources -= 1;
                 Air.PlayerOpinion += 3;
                 Air.resources += 2;
                 break;
@@ -267,7 +269,7 @@ public class GameManager : MonoBehaviour
                 Fire.PlayerOpinion += 3;
                 Fire.resources += 2;
                 Air.PlayerOpinion -= 4;
-                Air.resources += 1;
+                Air.resources -= 1;
                 break;
             default:
                 break;
@@ -428,7 +430,7 @@ public class GameManager : MonoBehaviour
             }
             else if (Zephyr1.complete == true)//this means the player beat at least the first Zephyr level
             {
-                if (Zephyr2.complete == false)//this means ONLY the first Eldoris level has been completed
+                if (Zephyr2.complete == false)//this means ONLY the first Zephyr level has been completed
                 {
                     if (Air.PlayerOpinion <= 0)//this means the Airs opinion of the player hit the negatives, or 0. 
                     {
@@ -450,6 +452,7 @@ public class GameManager : MonoBehaviour
                                 AirE.unlocked = false;
                                 pixieKilled = 0;
                                 Air.resources -= 7;
+                                Debug.Log("The Air faction has stolent the player's Air essence");
                             }
                             else if (AirE.unlocked == false && !Overworld2.SceneName.Contains("Overwolrd02C"))
                             {
@@ -474,6 +477,7 @@ public class GameManager : MonoBehaviour
                             FireE.amountToUnlock += 1;
                             WaterE.amountToUnlock += 1;
                             EarthE.amountToUnlock += 1;
+                            Debug.Log("The Air faction has sabotaged the player's essence system");
                         }
                     }
                     else if (Air.PlayerOpinion > 5)// the player has left them alone, they will leave the player alone for now
@@ -489,6 +493,7 @@ public class GameManager : MonoBehaviour
                                 {
                                     Air.resources -= 7;
                                     Earth.resources -= 7;
+                                    Debug.Log("The Air faction has failed to invade the Earth Faction");
                                 }
                                 else if(Earth.resources < 7)
                                 {
@@ -503,16 +508,17 @@ public class GameManager : MonoBehaviour
                                         }
                                         else if(Terra2.SceneName.Contains("Terra02"))
                                         {
-                                            //change this to Terra2C
+                                            Terra2.SceneName = "Terra02C";
                                             Earth.resources -= 3;
                                             Air.resources -= 5;
+                                            Debug.Log("The Air faction has successfully invaded Terra2");
                                         }
                                         
                                     }
                                     else if(Terra2.complete == true)
                                     {
                                         //IMPLEMENT LATER
-                                        //this area is too strong even for the air faction to fully invade
+                                        //Terra3 is too strong even for the air faction to fully invade
                                     }
                                 }
                             }
@@ -538,6 +544,179 @@ public class GameManager : MonoBehaviour
                         //IMPLEMENT LATER
                         //They will continue their shenanigans, picking on the weaker faction
                         
+                    }
+
+                }
+
+            }
+
+        }
+        //This last one is for the Fire faction
+        if (Fire.defeated == false)//can't do anything if they've been defeated
+        {
+            if (Scoria1.complete == false)//this is if the player has not beaten a single scoria level yet
+            {
+                if(Water.resources >= Air.resources)
+                {
+                    if (Earth.resources > Water.resources)//if the Earth faction has the most resources
+                    {
+                        Earth.resources -= 2;
+                        Fire.resources += 2;
+                        Debug.Log("The Fire faction has sabotaged the Earth faction");
+                    }
+                    else if (Water.resources >= 8)//The water faction has the most, and its more than 8
+                    {
+                        if(Fire.resources >=6)//the fire faction attempts to attack the water faction, it doesn't go well
+                        {
+                            Fire.resources -= 6;
+                            Water.resources -= 7;
+                            Debug.Log("The Fire faction failed to invade the Water Faction");
+                        }
+                        else if(Fire.resources < 6)//the fire faction sabotages the water faction and makes them think the player did it
+                        {
+                            Fire.resources -= 3;
+                            Water.PlayerOpinion -= 2;
+                            WaterE.amountToUnlock -= 2;
+                            Debug.Log("The Fire faction has sabotaged the Water faction, and made the player look guilty");
+                        }
+                    }
+                    else if(Water.resources < 8)//the fire faction attempts to attack the water faction, they actually get a foothold if its eldoris 2
+                    {
+                        //IMPLEMENT LATER
+                        if (Fire.resources >= 6)
+                        {
+                            if (Eldoris2.SceneName.Contains("Eldoris02B"))
+                            {
+                                Fire.resources -= 5;
+                                Water.resources -= 5;
+                                Eldoris2.SceneName = "Eldoris2";
+                                Debug.Log("The Fire faction has weakened the Water factions defenses at Eldoris2");
+                            }
+                            else if(Eldoris2.SceneName.Contains("Eldoris02"))
+                            {
+                                Fire.resources -= 6;
+                                Water.resources -= 7;
+                                Eldoris2.SceneName = "Eldoris02C";
+                                Debug.Log("The Fire faction has successfully invaded Eldoris2");
+                            }
+                        }
+                    }
+
+                }
+                else if(Air.resources > Water.resources)
+                {
+                    if (Earth.resources > Water.resources)//if the Earth faction has the most resources
+                    {
+                        Earth.resources -= 2;
+                        Fire.resources += 2;
+                        Debug.Log("The Fire faction has sabotaged the Earth faction");
+                    }
+                    else if(Fire.resources >= 5 )//they will attack the Air faction
+                    {
+                        //IMPLEMENT LATER
+                    }
+
+                }
+            }
+            else if (Scoria1.complete == true)//this means the player beat at least the first Scoria level
+            {
+                if (Scoria2.complete == false)//this means ONLY the first Scoria level has been completed
+                {
+                    if (Fire.PlayerOpinion <= 0)//this means the Fires opinion of the player hit the negatives, or 0. 
+                    {
+                       
+                        //IMPLEMENT LATER
+                        //They attack the overworld
+                        //Overworld2.SceneName = "Overworld02C";
+                        //Fire.resources -= 5;//they can put themselves in the negatives for this
+                        //Debug.Log("Overworld2 has changed to Overworld2C");
+                    }
+                    else if (Fire.PlayerOpinion > 0 && Fire.PlayerOpinion <= 6)//this means they've been attacked recently, they will strike back
+                    {
+                        //IMPLEMENT LATER
+                        if (Fire.resources >= 5)// they have some resources to spare
+                        {
+                            //IMPLEMENT LATER
+                            //they will attack the overworld first, otherwise they will go for one of the other factions
+                            
+                            /*if (Overworld2.SceneName.Contains("Overwolrd02C")) might use this later
+                            {
+                                Overworld2.SceneName = "Overworld02C";
+                                Air.resources -= 7;
+                                Debug.Log("Overworld2 has changed to Overworld2C");
+                            }*/
+
+                            
+                        }
+                        else if (Fire.resources >= 3 && Fire.resources < 5)//they dont have the resources to invade anywhere
+                        {
+                            //IMPLEMENT LATER
+                            //they will take resources from whichever faction has the least
+                        }
+                       
+                    }
+                    else if (Fire.PlayerOpinion > 5)// the player has left them alone, they will leave the player alone for now
+                    {
+                        //IMPLEMENT LATER
+                        if (Fire.resources >= 7)//they will attack either the Water or Air factions
+                        {
+                            //IMPLEMENT LATER
+                            //make sure they do something different if both factions are defeated
+                            if (Water.resources >= Air.resources)
+                            {
+                                if (Water.resources >= 7)//the fire faction attacks the water faction, but they fail
+                                {
+                                    Fire.resources -= 5;
+                                    Water.resources -= 7;
+                                    Debug.Log("The Fire faction failed to invade the Water Faction");
+                                }
+                                else if (Water.resources < 7)//this time they might succeed
+                                {
+                                    if (Eldoris2.complete == false)
+                                    {
+                                        if (Eldoris2.SceneName.Contains("Eldoris02B"))
+                                        {
+                                            Eldoris2.SceneName = "Eldoris02";
+                                            Water.resources -= 3;
+                                            Fire.resources += 1;
+                                            Debug.Log("The Fire faction has weakened the Air factions defenses at Eldoris2");
+                                        }
+                                        else if (Terra2.SceneName.Contains("Eldoris02"))
+                                        {
+                                            //IMPLEMENT LATER
+                                            //they invade Eldoris2, changing it to Eldoris2C
+                                        }
+
+                                    }
+                                    else if (Eldoris2.complete == true)
+                                    {
+                                        //IMPLEMENT LATER
+                                        //Eldoris3 is stronger, but that doesn't mean the fire faction can't break through
+                                    }
+                                }
+                            }
+                            else if (Air.resources > Water.resources)
+                            {
+                                //IMPLEMENT LATER
+                                //the Fire faction will attempt to invade the Air factions territory
+                            }
+                        }
+
+                        //If they can't do anything else, they will prepare to attack the player or the Earth faction
+                    }
+                }
+                else if (Scoria2.complete == true)//this means both Scoria 1 and 2 are completed
+                {
+                    if (Fire.PlayerOpinion <= 5)//they've been attacked by the player alot, maybe they should rethink their approach
+                    {
+                        //IMPLEMENT LATER
+                        //they will fortify their last level
+                    }
+                    else if (Air.PlayerOpinion > 5)//they haven't been attacked recently
+                    {
+                        //IMPLEMENT LATER
+                        //They will continue their attacks, destroying any threat to their power
+
                     }
 
                 }

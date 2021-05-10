@@ -255,7 +255,7 @@ public class LevelSelection : MonoBehaviour
 
     public void scoria02()
     {
-        SceneManager.LoadScene("Scoria02");
+        SceneManager.LoadScene(GameManager.Scoria2.SceneName);
     }
 
     public void scoria03()
