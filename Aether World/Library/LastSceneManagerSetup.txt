@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Levels/Overworld/Overworld02.unity
+- path: Assets/Scenes/Levels/Terra/Terra02C.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

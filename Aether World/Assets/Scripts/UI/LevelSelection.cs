@@ -270,7 +270,7 @@ public class LevelSelection : MonoBehaviour
 
     public void zephyr02()
     {
-        SceneManager.LoadScene("Zephyr02");
+        SceneManager.LoadScene(GameManager.Zephyr2.SceneName);
     }
 
     public void zephyr03()

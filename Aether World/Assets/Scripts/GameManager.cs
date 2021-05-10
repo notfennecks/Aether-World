@@ -146,13 +146,14 @@ public class GameManager : MonoBehaviour
         Terra1.complete = false;
         Terra1.SceneName = "Terra01";
         Terra2.complete = false;
-        Terra2.SceneName = "Terra02";
+        Terra2.SceneName = "Terra02A";
         Terra3.complete = false;
         Terra3.SceneName = "Terra03";//establish default data for terra
 
         Zephyr1.complete = false;
         Zephyr1.SceneName = "Zephyr01";
         Zephyr2.complete = false;
+        Zephyr2.SceneName = "Zephyr02";
         Zephyr3.complete = false;//establish default data for zephyr
 
         Earth.PlayerOpinion = 8;//sets all the factions starting opinions of the player. Helps determine what they will do.
@@ -207,6 +208,7 @@ public class GameManager : MonoBehaviour
         {
             Zephyr1.complete = true;
             Debug.Log("The player has beaten Zephyr 1");
+            FactionActivity("Zephyr");
         }
 
     }
@@ -270,22 +272,22 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
-        if(Earth.defeated == true)//now we need to see if any of the factions are defeated (if their level 3 has been beaten)
+        if (Earth.defeated == true)//now we need to see if any of the factions are defeated (if their level 3 has been beaten)
         {
             Earth.PlayerOpinion = 0;
             Earth.resources = 0;
         }
-        if(Water.defeated == true)
+        if (Water.defeated == true)
         {
             Water.PlayerOpinion = 0;
             Water.resources = 0;
         }
-        if(Fire.defeated == true)
+        if (Fire.defeated == true)
         {
             Fire.PlayerOpinion = 0;
             Fire.resources = 0;
         }
-        if(Air.defeated == true)
+        if (Air.defeated == true)
         {
             Air.PlayerOpinion = 0;
             Air.resources = 0;
@@ -293,23 +295,23 @@ public class GameManager : MonoBehaviour
 
         // Here is where the factions begin to change levels around
         // starting with the Earth faction
-        if(Earth.defeated == false)//can't do anything if they've been defeated
-        { 
-            if(Terra1.complete == false)//this is if the player has not beaten a single terra level yet
+        if (Earth.defeated == false)//can't do anything if they've been defeated
+        {
+            if (Terra1.complete == false)//this is if the player has not beaten a single terra level yet
             {
                 Earth.resources += 2;//The Earth faction does not want to provoke anyone yet, so they build up their own resources instead
             }
-            else if(Terra1.complete == true)//this means the player beat at least the first Terra level
+            else if (Terra1.complete == true)//this means the player beat at least the first Terra level
             {
                 if (Terra2.complete == false)//this means ONLY the first Terra level has been completed
                 {
-                    if (Earth.PlayerOpinion <= 0)//this means the earths opinion of the player hit the negatives, or 0. 
+                    /*if (Earth.PlayerOpinion <= 0)//this means the earths opinion of the player hit the negatives, or 0. 
                     {
                         Earth.PlayerOpinion = 0;
                         //IMPLEMENT LATER
                         //They are most likely going to attack the overworld
-                    }
-                    else if (Earth.PlayerOpinion > 0 && Earth.PlayerOpinion <= 4)//this means they've been attacked, they will likely want to fortify themselves
+                    }*/
+                    if (Earth.PlayerOpinion > 0 && Earth.PlayerOpinion <= 4)//this means they've been attacked, they will likely want to fortify themselves
                     {
                         //IMPLEMENT LATER
                         if (Earth.resources >= 5)// they have some resources to spare
@@ -349,23 +351,23 @@ public class GameManager : MonoBehaviour
             }
         }
         // This is for the Water faction
-        if(Water.defeated == false)//can't do anything if they've been defeated
-        { 
-            if(Eldoris1.complete == false)//this is if the player has not beaten a single eldoris level yet
+        if (Water.defeated == false)//can't do anything if they've been defeated
+        {
+            if (Eldoris1.complete == false)//this is if the player has not beaten a single eldoris level yet
             {
                 Fire.resources -= 2;//The Water faction will try to make sure the fire faction doesn't get an upper hand on them
             }
-            else if(Eldoris1.complete == true)//this means the player beat at least the first Eldoris level
+            else if (Eldoris1.complete == true)//this means the player beat at least the first Eldoris level
             {
                 if (Eldoris2.complete == false)//this means ONLY the first Eldoris level has been completed
                 {
-                    if (Water.PlayerOpinion <= 0)//this means the waters opinion of the player hit the negatives, or 0. 
+                   /* if (Water.PlayerOpinion <= 0)//this means the waters opinion of the player hit the negatives, or 0. 
                     {
-                        Earth.PlayerOpinion = 0;
+                        Water.PlayerOpinion = 0;
                         //IMPLEMENT LATER
                         //They are most likely going to attack the overworld
-                    }
-                    else if (Water.PlayerOpinion > 0 && Water.PlayerOpinion <= 5)//this means they've been attacked recently, they will likely strike back
+                    }*/
+                    if (Water.PlayerOpinion <= 5)//this means they've been attacked recently, they will likely strike back
                     {
                         //IMPLEMENT LATER
                         if (Water.resources >= 7)// they have some resources to spare
@@ -375,7 +377,7 @@ public class GameManager : MonoBehaviour
                             Water.resources -= 7;
                             Debug.Log("Overworld2 has changed to Overworld2B");
                         }
-                        else if(Water.resources >= 3 && Water.resources < 7)//they dont have the resources to launch a counterattack
+                        else if (Water.resources >= 3 && Water.resources < 7)//they dont have the resources to launch a counterattack
                         {
                             //IMPLEMENT LATER
                             Eldoris2.SceneName = "Eldoris02B";
@@ -404,7 +406,7 @@ public class GameManager : MonoBehaviour
                         //IMPLEMENT LATER
                         //they will panick and want to fortify themselves as much as possible
                     }
-                    else if (Water.PlayerOpinion > 4)//they haven't been attacked recently
+                    else if (Water.PlayerOpinion > 5)//they haven't been attacked recently
                     {
                         //IMPLEMENT LATER
                         //They realize they likely won't hold forever, instead opting to make a new foothold somewhere else 
@@ -416,8 +418,132 @@ public class GameManager : MonoBehaviour
 
             }
         }
+        //This is for the Air faction
+        if (Air.defeated == false)//can't do anything if they've been defeated
+        {
+            if (Zephyr1.complete == false)//this is if the player has not beaten a single zephyr level yet
+            {
+                Earth.resources -= 2;
+                Fire.resources -= 1;//the Air faction likes to mess with the others, they're good at messing with the earth faction
+            }
+            else if (Zephyr1.complete == true)//this means the player beat at least the first Zephyr level
+            {
+                if (Zephyr2.complete == false)//this means ONLY the first Eldoris level has been completed
+                {
+                    if (Air.PlayerOpinion <= 0)//this means the Airs opinion of the player hit the negatives, or 0. 
+                    {
+                        Air.PlayerOpinion = 6;
+                        //IMPLEMENT LATER
+                        Overworld2.SceneName = "Overworld02C";
+                        Air.resources -= 7;//they can put themselves in the negatives for this
+                        Debug.Log("Overworld2 has changed to Overworld2C");
+                    }
+                    else if (Air.PlayerOpinion > 0 && Air.PlayerOpinion <= 5)//this means they've been attacked recently, they will likely strike back
+                    {
+                        //IMPLEMENT LATER
+                        if (Air.resources >= 7)// they have some resources to spare
+                        {
+                            //IMPLEMENT LATER
+                            
+                            if (AirE.unlocked == true)
+                            {
+                                AirE.unlocked = false;
+                                pixieKilled = 0;
+                                Air.resources -= 7;
+                            }
+                            else if (AirE.unlocked == false && !Overworld2.SceneName.Contains("Overwolrd02C"))
+                            {
+                                Overworld2.SceneName = "Overworld02C";
+                                Air.resources -= 7;
+                                Debug.Log("Overworld2 has changed to Overworld2C");
+                            }
+                            
+                            //or they will steal a different unlocked essence
+                        }
+                        else if (Air.resources >= 5 && Air.resources < 7)//they dont have the resources to mess with the player
+                        {
+                            //IMPLEMENT LATER
+                            Zephyr2.SceneName = "Zephyr02B";
+                            Air.resources -= 5;
+                            Debug.Log("Zephyr2 has changed to Zephyr2B");
+                        }
+                        else if (Air.resources < 5)// they will steal some energy from the player, gaining resources and making it harder for the player to unlock their essences
+                        {
+                            Air.resources += 1;
+                            AirE.amountToUnlock += 1;
+                            FireE.amountToUnlock += 1;
+                            WaterE.amountToUnlock += 1;
+                            EarthE.amountToUnlock += 1;
+                        }
+                    }
+                    else if (Air.PlayerOpinion > 5)// the player has left them alone, they will leave the player alone for now
+                    {
+                        //IMPLEMENT LATER
+                        if (Air.resources >= 7)//they will attack either the Earth or fire factions
+                        {
+                            //IMPLEMENT LATER
+                            //make sure they do something different if both factions are defeated
+                            if (Earth.resources >= Fire.resources)
+                            {
+                                if(Earth.resources >= 7)
+                                {
+                                    Air.resources -= 7;
+                                    Earth.resources -= 7;
+                                }
+                                else if(Earth.resources < 7)
+                                {
+                                    if(Terra2.complete == false)
+                                    {
+                                        if(Terra2.SceneName.Contains("Terra02B"))
+                                        {
+                                            Terra2.SceneName = "Terra02";
+                                            Earth.resources -= 2;
+                                            Air.resources -= 7;
+                                            Debug.Log("The Air faction has weakened the Earth factions defenses at Terra2");
+                                        }
+                                        else if(Terra2.SceneName.Contains("Terra02"))
+                                        {
+                                            //change this to Terra2C
+                                            Earth.resources -= 3;
+                                            Air.resources -= 5;
+                                        }
+                                        
+                                    }
+                                    else if(Terra2.complete == true)
+                                    {
+                                        //IMPLEMENT LATER
+                                        //this area is too strong even for the air faction to fully invade
+                                    }
+                                }
+                            }
+                            else if (Fire.resources > Earth.resources)
+                            {
+                                //IMPLEMENT LATER
+                                //the air faction will attempt to invade the fire factions territory
+                            }
+                        }
+                       
+                        //If they can't do anything else, they will prepare to attack the player
+                    }
+                }
+                else if (Zephyr2.complete == true)//this means both Zephyr 1 and 2 are completed
+                {
+                    if (Air.PlayerOpinion <= 5)//they've been attacked by the player too much, now they're afraid
+                    {
+                        //IMPLEMENT LATER
+                        //they will fortify their last level
+                    }
+                    else if (Air.PlayerOpinion > 5)//they haven't been attacked recently
+                    {
+                        //IMPLEMENT LATER
+                        //They will continue their shenanigans, picking on the weaker faction
+                        
+                    }
 
-}
+                }
 
+            }
 
+        }
+    }
 }
