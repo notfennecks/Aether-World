@@ -28,7 +28,7 @@ public class AirJump : MonoBehaviour
                 pm.rb.velocity = movement;
                 CoolDownTime = Time.time + CoolDown;
                 CanUse = false;
-                Debug.Log("Boing");
+                //Debug.Log("Boing");
             }
         }
         if (CoolDownTime < Time.time)
