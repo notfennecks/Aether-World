@@ -141,7 +141,7 @@ public class GameManager : MonoBehaviour
         Scoria1.complete = false;
         Scoria1.SceneName = "Scoria01";
         Scoria2.complete = false;
-        Scoria2.SceneName = "Scoria2";
+        Scoria2.SceneName = "Scoria02";
         Scoria3.complete = false;//establish default data for scoria
 
         Terra1.complete = false;
